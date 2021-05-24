@@ -1,4 +1,4 @@
-# MultilingualLearningVR-unity
+# blockcodingVR-unity
 # VR 소프트웨어 코딩 교육 플랫폼
 
 4차 산업혁명 시대, 필수요소가 된 코딩 교육을 위한 VR 블록코딩 시스템입니다.

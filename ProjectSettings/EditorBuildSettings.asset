@@ -12,8 +12,23 @@ EditorBuildSettings:
     path: Assets/01.Scenes/02.Menu.unity
     guid: a5d2ede4915943747a85523d9a4fe6df
   - enabled: 1
-    path: Assets/01.Scenes/03.LMap.unity
+    path: Assets/01.Scenes/LoadScene/Learn1.unity
+    guid: e1b3a31f4b0c91c46a08a0ea9104ce86
+  - enabled: 1
+    path: Assets/01.Scenes/03.Learn1.unity
     guid: cdbd748589465a343ac199c5bed4b666
+  - enabled: 1
+    path: Assets/01.Scenes/LoadScene/Learn2.unity
+    guid: 502bda78631752f4791e3f97b0fa3b24
+  - enabled: 1
+    path: Assets/01.Scenes/04.Learn2.unity
+    guid: be707ecaa5ed61f458706e3cffa751dd
+  - enabled: 1
+    path: Assets/01.Scenes/LoadScene/Learn3.unity
+    guid: ec4dbd786877f4944b876097382a34e5
+  - enabled: 1
+    path: Assets/01.Scenes/05.Learn3.unity
+    guid: a0f2bbf7322001c47a6838478de88724
   - enabled: 1
     path: Assets/01.Scenes/Network/Net1.unity
     guid: 22112c00a5634494996d64ff9f004047

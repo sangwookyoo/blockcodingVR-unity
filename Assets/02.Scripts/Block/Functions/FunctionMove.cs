@@ -26,7 +26,7 @@ public class FunctionMove : MonoBehaviour
         while (true)
         {
             player.transform.Translate(0, 0, 5 * Time.deltaTime * 0.7f);
-            if(FunctionDeath.DeathCheck == true) // 죽었으면 그만 앞으로 가라
+            if(FunctionDeath.PlayerDeath == true) // 죽었으면 그만 앞으로 가라
             {
                 break;
             }

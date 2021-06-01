@@ -26,7 +26,7 @@ public class FunctionJump : MonoBehaviour
         float checkTime = 0;
         float directionTime = 1;    // 연출시간
         
-       // float directionTime2 = 2;    // 연출시간
+        float directionTime2 = 2;    // 연출시간
         BoxCollider Collider = Player.GetComponent<BoxCollider>();
         Collider.enabled = false;
         Debug.Log("1" + Collider.enabled);

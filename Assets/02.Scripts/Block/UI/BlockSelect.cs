@@ -5,26 +5,20 @@ using System;
 
 public class BlockSelect : MonoBehaviour
 {
-
     List<GameObject> BlockList = new List<GameObject>();
     Transform a;
-    // Start is called before the first frame update
 
     public void Start()
     {
-
-
         int i;
+
         for (i = 0; i < 4; i++)
         {
             a = GameObject.Find("Block").transform.GetChild(i);
             BlockList.Add(a.gameObject);
-
-
         }
 
     }
-
     
     public void select1()
     {
@@ -62,6 +56,3 @@ public class BlockSelect : MonoBehaviour
                 BlockList[i].SetActive(false);
     }
 }
-
-
-

@@ -5,16 +5,25 @@ using UnityEngine.UI;
 
 public class OpenClose : MonoBehaviour
 {
-    public GameObject gameObjectOpen = null;
-    public GameObject gameObjectClose = null;
-    public Image StartButton = null;
+    public GameObject gameObjectOpen;
+    public GameObject gameObjectClose;
+    public Image StartButton = null ;
+    CanvasGroup OpenCanvasGroup;
+    CanvasGroup CloseCanvasGroup;
 
-    public void OnButtonClick()
+   
+    public void OnOffButtonClick()
     {
-        gameObjectOpen.SetActive(true);
-        gameObjectClose.SetActive(false);
+        OpenCanvasGroup = gameObjectOpen.GetComponent<CanvasGroup>();
+        CloseCanvasGroup = gameObjectClose.GetComponent<CanvasGroup>();
+        OpenCanvasGroup.alpha = 1;
+        OpenCanvasGroup.blocksRaycasts = true;
+        CloseCanvasGroup.alpha = 0;
+        CloseCanvasGroup.blocksRaycasts = false;
+
 
         if (StartButton != null && StartButton.enabled == false)
-            StartButton.enabled = true;
+            StartButton.enabled = false;
+
     }
 }

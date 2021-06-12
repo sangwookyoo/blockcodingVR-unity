@@ -32,10 +32,12 @@ public class player_holder : MonoBehaviour
     public IEnumerator Go() //스타트W버튼을 눌렀을때 실행되는 코루틴함수
     {
         yield return new WaitForSeconds(1f); //1초 딜레이
-        Fail fail = FailButton.GetComponent<Fail>();
+        //Fail fail = FailButton.GetComponent<Fail>();
         //메인패널에 접근
-        Blocks = GameObject.Find("Canvas").transform.Find("Panel").transform.Find("Panel Main Loop").gameObject; //Panel Main Loop에 접근
+        Blocks = GameObject.Find("Drop Box").gameObject; //Panel Main Loop에 접근
         int nSize = Blocks.transform.childCount; //Panel Main Loop의 자식들 갯수
+
+
         for (int i = 0; i < nSize; i++)
         {
             Debug.Log("i : " + i);
@@ -60,12 +62,13 @@ public class player_holder : MonoBehaviour
             }
             else if (!FunctionMove && !FunctionJump &&  FunctionRotate) // 회전 블록 일때 실행
             {
-                if (Child.tag == "Rotate_R") //오른쪽 회전
-                    yield return StartCoroutine(FunctionRotate.RightRotate());
-                else if (Child.tag == "Rotate_L") //왼쪽 회전
-                    yield return StartCoroutine(FunctionRotate.LeftRotate());
-                else if (Child.tag == "Rotate_B") //오른쪽 회전
-                    yield return StartCoroutine(FunctionRotate.BackRotate());
+                yield return StartCoroutine(FunctionRotate.RightRotate());
+                //if (Child.tag == "Rotate_R") //오른쪽 회전
+                //    yield return StartCoroutine(FunctionRotate.RightRotate());
+                //else if (Child.tag == "Rotate_L") //왼쪽 회전
+                //    yield return StartCoroutine(FunctionRotate.LeftRotate());
+                //else if (Child.tag == "Rotate_B") //오른쪽 회전
+                //    yield return StartCoroutine(FunctionRotate.BackRotate());
             }
             else if (!FunctionMove && !FunctionJump &&  !FunctionRotate && FunctionFor)
             {
@@ -76,15 +79,15 @@ public class player_holder : MonoBehaviour
                 yield return StartCoroutine(FunctionClass.Function()); 
             }
 
-            if (i == (nSize - 1)) //마지막 블록까지 모두 실행됐을때
-            {
-                if (Mathf.Abs(transform.position.x - Finish.transform.position.x) <= 1F && Mathf.Abs(Player.transform.position.z - Finish.transform.position.z) <= 1F) //도착지점에 도착하면 
-                {
-                    animator.SetTrigger("Jump"); //점프
-                }
-                else // 도착지점에 도착하지 못하면
-                    fail.FailCheck = true; //실패
-            }
+            //if (i == (nSize - 1)) //마지막 블록까지 모두 실행됐을때
+            //{
+            //    if (Mathf.Abs(transform.position.x - Finish.transform.position.x) <= 1F && Mathf.Abs(Player.transform.position.z - Finish.transform.position.z) <= 1F) //도착지점에 도착하면 
+            //    {
+            //        animator.SetTrigger("Jump"); //점프
+            //    }
+            //    else // 도착지점에 도착하지 못하면
+            //        fail.FailCheck = true; //실패
+            //}
         }
     }
    

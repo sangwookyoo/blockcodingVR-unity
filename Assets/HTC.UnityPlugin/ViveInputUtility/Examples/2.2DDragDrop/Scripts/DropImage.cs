@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-
+using System.Collections;
 public class DropImage : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public Image containerImage;
@@ -9,6 +10,12 @@ public class DropImage : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
     private Color normalColor;
     public Color highlightColor = Color.yellow;
 
+    [SerializeField]
+    GameObject CreateDrop;
+    public GameObject DropBox;
+    public GameObject Drop;
+    
+    
     public void OnEnable()
     {
         if (containerImage != null)
@@ -22,9 +29,69 @@ public class DropImage : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
         if (receivingImage == null)
             return;
 
-        Sprite dropSprite = GetDropSprite(data);
-        if (dropSprite != null)
-            receivingImage.overrideSprite = dropSprite;
+        int Count = DropBox.transform.childCount;
+        Debug.Log("Count : " + Count);
+        if (Count == 1)
+        {
+            Sprite dropSprite = GetDropSprite(data);
+            if (dropSprite != null)
+                receivingImage.overrideSprite = dropSprite;
+
+            if (data.pointerDrag.CompareTag("MoveZ"))
+            {
+                gameObject.AddComponent<FunctionMove>();
+            }
+            if (data.pointerDrag.CompareTag("Rotate_R"))
+            {
+                gameObject.AddComponent<FunctionRotate>().RightRotate();
+            }
+            if (data.pointerDrag.CompareTag("Rotate_L"))
+            {
+                gameObject.AddComponent<FunctionRotate>().LeftRotate();
+            }
+            if (data.pointerDrag.CompareTag("Rotate_B"))
+            {
+                gameObject.AddComponent<FunctionRotate>().BackRotate();
+            }
+            if (data.pointerDrag.CompareTag("Jump"))
+            {
+                gameObject.AddComponent<FunctionJump>().Jump();
+            }
+            CreateDrop = (Instantiate(Drop, DropBox.transform.position, Quaternion.identity));
+            CreateDrop.transform.SetParent(DropBox.transform);
+        }
+        else
+        {
+            Sprite dropSprite = GetDropSprite(data);
+            if (dropSprite != null)
+                receivingImage.overrideSprite = dropSprite;
+
+            if (data.pointerDrag.CompareTag("MoveZ"))
+            {
+                CreateDrop.AddComponent<FunctionMove>();
+            }
+            if (data.pointerDrag.CompareTag("Rotate_R"))
+            {
+                CreateDrop.AddComponent<FunctionRotate>().RightRotate();
+            }
+            if (data.pointerDrag.CompareTag("Rotate_L"))
+            {
+                CreateDrop.AddComponent<FunctionRotate>().LeftRotate();
+            }
+            if (data.pointerDrag.CompareTag("Rotate_B"))
+            {
+                CreateDrop.AddComponent<FunctionRotate>().BackRotate();
+            }
+            if (data.pointerDrag.CompareTag("Jump"))
+            {
+                CreateDrop.AddComponent<FunctionJump>().Jump();
+            }
+            CreateDrop = Instantiate(Drop, DropBox.transform.position, Quaternion.identity);
+            CreateDrop.transform.SetParent(DropBox.transform);
+            Debug.Log(CreateDrop.transform.parent.name);
+        }
+
+
     }
 
     public void OnPointerEnter(PointerEventData data)

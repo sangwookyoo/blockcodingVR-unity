@@ -358,7 +358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b39829a59361dbd448c76ad459656e86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 03.Learn1
+  sceneName: Learn1
 --- !u!65 &6466264
 BoxCollider:
   m_ObjectHideFlags: 0

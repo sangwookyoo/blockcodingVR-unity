@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class KeyActive : MonoBehaviour
 {
-    public GameObject Player;
-    public GameObject NPlayer;
     public GameObject key;
     public GameObject key_particle;
+    public string sceneName;
 
     private float num;
 
@@ -23,8 +23,8 @@ public class KeyActive : MonoBehaviour
             if (num > 5.0f)
             {
                 num = 0.0f;
-                Player.SetActive(false);
-                NPlayer.SetActive(true);
+                SceneManager.LoadSceneAsync(sceneName);
+                Debug.Log(sceneName + "로 이동합니다.");
             }
         }
     }

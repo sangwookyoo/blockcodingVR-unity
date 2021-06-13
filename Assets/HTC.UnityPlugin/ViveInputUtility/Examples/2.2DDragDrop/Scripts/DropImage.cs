@@ -61,35 +61,35 @@ public class DropImage : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
             CreateDrop.transform.SetParent(DropBox.transform);
         }
         else
-        //{
-        //    Sprite dropSprite = GetDropSprite(data);
-        //    if (dropSprite != null)
-        //        receivingImage.overrideSprite = dropSprite;
+        {
+            Sprite dropSprite = GetDropSprite(data);
+            if (dropSprite != null)
+                receivingImage.overrideSprite = dropSprite;
 
-        //    if (data.pointerDrag.CompareTag("MoveZ"))
-        //    {
-        //        CreateDrop.AddComponent<FunctionMove>();
-        //    }
-        //    if (data.pointerDrag.CompareTag("Rotate_R"))
-        //    {
-        //        CreateDrop.AddComponent<FunctionRotate>().RightRotate();
-        //    }
-        //    if (data.pointerDrag.CompareTag("Rotate_L"))
-        //    {
-        //        CreateDrop.AddComponent<FunctionRotate>().LeftRotate();
-        //    }
-        //    if (data.pointerDrag.CompareTag("Rotate_B"))
-        //    {
-        //        CreateDrop.AddComponent<FunctionRotate>().BackRotate();
-        //    }
-        //    if (data.pointerDrag.CompareTag("Jump"))
-        //    {
-        //        CreateDrop.AddComponent<FunctionJump>().Jump();
-        //    }
-        //    CreateDrop = Instantiate(Drop, DropBox.transform.position, Quaternion.identity);
-        //    CreateDrop.transform.SetParent(DropBox.transform);
-        //    Debug.Log(CreateDrop.transform.parent.name);
-        //}
+            if (data.pointerDrag.CompareTag("MoveZ"))
+            {
+                CreateDrop.AddComponent<FunctionMove>();
+            }
+            if (data.pointerDrag.CompareTag("Rotate_R"))
+            {
+                CreateDrop.AddComponent<FunctionRotate>().RightRotate();
+            }
+            if (data.pointerDrag.CompareTag("Rotate_L"))
+            {
+                CreateDrop.AddComponent<FunctionRotate>().LeftRotate();
+            }
+            if (data.pointerDrag.CompareTag("Rotate_B"))
+            {
+                CreateDrop.AddComponent<FunctionRotate>().BackRotate();
+            }
+            if (data.pointerDrag.CompareTag("Jump"))
+            {
+                CreateDrop.AddComponent<FunctionJump>().Jump();
+            }
+            CreateDrop = Instantiate(Drop, DropBox.transform.position, Quaternion.identity);
+            CreateDrop.transform.SetParent(DropBox.transform);
+            Debug.Log(CreateDrop.transform.parent.name);
+        }
 
 
     }

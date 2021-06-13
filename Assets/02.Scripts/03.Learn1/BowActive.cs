@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class BowActive : MonoBehaviour
 {
-    public GameObject VivePlayer;
-    public GameObject SteamVRPlayer;
+    public GameObject Player;
     public GameObject Bow;
     public GameObject Monster;
 
@@ -14,8 +13,7 @@ public class BowActive : MonoBehaviour
         if (c.name == "Player")
         {
             Debug.Log("충돌감지");
-            VivePlayer.SetActive(false);
-            SteamVRPlayer.SetActive(true);
+            Player.SetActive(false);
             Bow.SetActive(true);
             Monster.SetActive(true);
         }

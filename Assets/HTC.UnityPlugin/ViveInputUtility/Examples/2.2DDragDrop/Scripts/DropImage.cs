@@ -9,6 +9,10 @@ public class DropImage : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
     private Color normalColor;
     public Color highlightColor = Color.yellow;
 
+    public GameObject DropBox;
+    public GameObject CreateDrop;
+    public GameObject Drop;
+
     public void OnEnable()
     {
         if (containerImage != null)
@@ -22,9 +26,92 @@ public class DropImage : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
         if (receivingImage == null)
             return;
 
-        Sprite dropSprite = GetDropSprite(data);
-        if (dropSprite != null)
-            receivingImage.overrideSprite = dropSprite;
+        int Count = DropBox.transform.childCount;
+        Debug.Log("Count : " + Count);
+
+        if (Count == 1)
+        {
+            Sprite dropSprite = GetDropSprite(data);
+            if (dropSprite != null)
+                receivingImage.overrideSprite = dropSprite;
+
+            if (data.pointerDrag.CompareTag("MoveZ"))
+            {
+                gameObject.AddComponent<FunctionMove>();
+                gameObject.tag = "MoveZ";
+            }
+            if (data.pointerDrag.CompareTag("Rotate_R"))
+            {
+                gameObject.AddComponent<FunctionRotate>().RightRotate();
+                gameObject.tag = "Rotate_R";
+            }
+            if (data.pointerDrag.CompareTag("Rotate_L"))
+            {
+                gameObject.AddComponent<FunctionRotate>().LeftRotate();
+                gameObject.tag = "Rotate_L";
+            }
+            if (data.pointerDrag.CompareTag("Rotate_B"))
+            {
+                gameObject.AddComponent<FunctionRotate>().BackRotate();
+                gameObject.tag = "Rotate_B";
+            }
+            if (data.pointerDrag.CompareTag("Jump"))
+            {
+                gameObject.AddComponent<FunctionJump>().Jump();
+                gameObject.tag = "Jump";
+            }
+            CreateDrop = (Instantiate(Drop, DropBox.transform.position, DropBox.transform.rotation));
+            CreateDrop.transform.SetParent(DropBox.transform);
+            CreateDrop.transform.localScale = new Vector3(1, 1, 1);
+            CreateDrop.GetComponent<Image>().sprite = default;
+            CreateDrop.GetComponent<RectTransform>().sizeDelta = new Vector2(300,100);
+            Debug.Log("1");
+        }
+        else
+        {
+            Sprite dropSprite = GetDropSprite(data);
+            if (dropSprite != null)
+                receivingImage.overrideSprite = dropSprite;
+
+            if (data.pointerDrag.CompareTag("MoveZ"))
+            {
+                CreateDrop.AddComponent<FunctionMove>();
+                //CreateDrop.tag = "MoveZ";
+            }
+            if (data.pointerDrag.CompareTag("Rotate_R"))
+            {
+                CreateDrop.AddComponent<FunctionRotate>().RightRotate();
+                //CreateDrop.tag = "Rotate_R";
+            }
+            if (data.pointerDrag.CompareTag("Rotate_L"))
+            {
+                CreateDrop.AddComponent<FunctionRotate>().LeftRotate();
+                //CreateDrop.tag = "Rotate_L";
+            }
+            if (data.pointerDrag.CompareTag("Rotate_B"))
+            {
+                CreateDrop.AddComponent<FunctionRotate>().BackRotate();
+                //CreateDrop.tag = "Rotate_B";
+            }
+            if (data.pointerDrag.CompareTag("Jump"))
+            {
+                CreateDrop.AddComponent<FunctionJump>().Jump();
+                //CreateDrop.tag = "Jump";
+            }
+            if (data.pointerDrag.CompareTag("For"))
+            {
+                CreateDrop.AddComponent<FunctionFor>();
+                //CreateDrop.tag = "Jump";
+            }
+            CreateDrop.GetComponent<Image>().sprite = data.pointerDrag.GetComponent<Image>().sprite;
+            CreateDrop = Instantiate(Drop, DropBox.transform.position, DropBox.transform.rotation);
+            CreateDrop.transform.SetParent(DropBox.transform);
+            CreateDrop.transform.localScale = new Vector3(1, 1, 1);
+            //CreateDrop.GetComponent<Image>().sprite = data.pointerDrag.GetComponent<Image>().sprite;
+            CreateDrop.GetComponent<RectTransform>().sizeDelta = new Vector2(300, 100);
+            Debug.Log("2");
+            Debug.Log(CreateDrop.transform.parent.name);
+        }
     }
 
     public void OnPointerEnter(PointerEventData data)

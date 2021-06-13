@@ -32,9 +32,9 @@ public class player_holder : MonoBehaviour
     public IEnumerator Go() //스타트W버튼을 눌렀을때 실행되는 코루틴함수
     {
         yield return new WaitForSeconds(1f); //1초 딜레이
-        Fail fail = FailButton.GetComponent<Fail>();
+        //Fail fail = FailButton.GetComponent<Fail>();
         //메인패널에 접근
-        Blocks = GameObject.Find("Canvas").transform.Find("Panel").transform.Find("Panel Main Loop").gameObject; //Panel Main Loop에 접근
+        Blocks = GameObject.Find("Drop Box").gameObject; //Panel Main Loop에 접근
         int nSize = Blocks.transform.childCount; //Panel Main Loop의 자식들 갯수
         for (int i = 0; i < nSize; i++)
         {
@@ -76,15 +76,15 @@ public class player_holder : MonoBehaviour
                 yield return StartCoroutine(FunctionClass.Function()); 
             }
 
-            if (i == (nSize - 1)) //마지막 블록까지 모두 실행됐을때
-            {
-                if (Mathf.Abs(transform.position.x - Finish.transform.position.x) <= 1F && Mathf.Abs(Player.transform.position.z - Finish.transform.position.z) <= 1F) //도착지점에 도착하면 
-                {
-                    animator.SetTrigger("Jump"); //점프
-                }
-                else // 도착지점에 도착하지 못하면
-                    fail.FailCheck = true; //실패
-            }
+            //if (i == (nSize - 1)) //마지막 블록까지 모두 실행됐을때
+            //{
+            //    if (Mathf.Abs(transform.position.x - Finish.transform.position.x) <= 1F && Mathf.Abs(Player.transform.position.z - Finish.transform.position.z) <= 1F) //도착지점에 도착하면 
+            //    {
+            //        animator.SetTrigger("Jump"); //점프
+            //    }
+            //    //else // 도착지점에 도착하지 못하면
+            //        //fail.FailCheck = true; //실패
+            //}
         }
     }
    

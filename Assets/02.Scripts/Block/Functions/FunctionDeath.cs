@@ -27,9 +27,9 @@ public class FunctionDeath : MonoBehaviour
     {
         if (DeathCheck && animator.GetCurrentAnimatorStateInfo(0).normalizedTime >=0.9f )  //죽는 애니메이션이 끝나면
         {
-            //transform.position = startPos;
-            //transform.rotation = StartRot;
-            //animator.Rebind(); //애니메이션 초기화
+            transform.position = startPos;
+            transform.rotation = StartRot;
+            animator.Rebind(); //애니메이션 초기화
             PlayerDeath = false;
             DeathCheck = false;
         }

@@ -5,6 +5,23 @@ TagManager:
   serializedVersion: 2
   tags:
   - UI
+  - Rotate_L
+  - Jump
+  - CloseButton
+  - MoveZ
+  - Rotate_R
+  - section0
+  - section2
+  - For
+  - Rotate_B
+  - FailButton
+  - section3
+  - section1
+  - StartButton
+  - BC_Button
+  - section4
+  - Object
+  - Wall
   layers:
   - Default
   - TransparentFX

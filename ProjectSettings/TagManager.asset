@@ -20,8 +20,8 @@ TagManager:
   - StartButton
   - BC_Button
   - section4
-  - Object
   - Wall
+  - Object
   layers:
   - Default
   - TransparentFX

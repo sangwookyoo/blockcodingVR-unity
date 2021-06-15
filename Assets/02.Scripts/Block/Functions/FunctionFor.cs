@@ -16,18 +16,18 @@ public class FunctionFor : MonoBehaviour
      void Update()
     {
         int nSize = transform.childCount;
-        Debug.Log("nsize : " + nSize);
+        //Debug.Log("nsize : " + nSize);
         int dSize = nSize - Size;
-        Debug.Log("dsize : " + dSize);
+        //Debug.Log("dsize : " + dSize);
         if (dSize >= 1)
         {
-            verticalLayoutGroup.padding.top += 15;
-            verticalLayoutGroup.padding.bottom += 15;
+            //verticalLayoutGroup.padding.top += 15;
+            //verticalLayoutGroup.padding.bottom += 15;
             dSize = dSize - 1;
-            Debug.Log("dsize2 : " + dSize);
+            //Debug.Log("dsize2 : " + dSize);
         }
         dSize = dSize - 1;
-        Debug.Log("dsize3 : " + dSize);
+        //Debug.Log("dsize3 : " + dSize);
     }
     
     IEnumerator ForBox() // For()에서 돌아갈 블록들을 여기에 한번 저장을 한다.

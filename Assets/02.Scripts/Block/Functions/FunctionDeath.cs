@@ -17,7 +17,7 @@ public class FunctionDeath : MonoBehaviour
         startPos = transform.position;
         StartRot = transform.rotation;
         PlayerDeath = false;
-        //DeathCheck = false;
+        DeathCheck = false;
         animator = transform.GetComponent<Animator>();
         
     }

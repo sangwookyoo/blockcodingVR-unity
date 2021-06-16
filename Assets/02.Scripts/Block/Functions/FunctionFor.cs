@@ -19,10 +19,10 @@ public class FunctionFor : MonoBehaviour
         //Debug.Log("nsize : " + nSize);
         int dSize = nSize - Size;
         //Debug.Log("dsize : " + dSize);
-        if (dSize >= 1)
+        if (dSize >= 2)
         {
             //verticalLayoutGroup.padding.top += 15;
-            //verticalLayoutGroup.padding.bottom += 15;
+           //verticalLayoutGroup.padding.bottom += 15;
             dSize = dSize - 1;
             //Debug.Log("dsize2 : " + dSize);
         }

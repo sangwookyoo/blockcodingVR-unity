@@ -7,7 +7,7 @@ public class DropImage : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
     public Image containerImage;
     public Image receivingImage;
     private Color normalColor;
-    public Color highlightColor = Color.yellow;
+    public Color highlightColor;
 
     public GameObject DropBox;
     public GameObject CreateDrop;

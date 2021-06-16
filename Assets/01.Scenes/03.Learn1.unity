@@ -3438,6 +3438,7 @@ GameObject:
   - component: {fileID: 502006755}
   - component: {fileID: 502006754}
   - component: {fileID: 502006757}
+  - component: {fileID: 502006758}
   m_Layer: 5
   m_Name: StartBtn
   m_TagString: Untagged
@@ -3518,6 +3519,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 502006758}
+        m_MethodName: OffBtnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1397346307}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &502006755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3565,6 +3588,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartButton: {fileID: 0}
   FinishCheck: 0
+--- !u!114 &502006758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502006752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8edee95e7aa559345aa9fb8f459b7ce0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PanelAlpha: {fileID: 370726728}
 --- !u!4 &502433602 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 468004, guid: e7e303a7a6ca8a9458cb4268dd3b4ac4,
@@ -5934,6 +5970,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: VivePointers
       objectReference: {fileID: 0}
+    - target: {fileID: 446634, guid: 12ee41758a687f54e98120e486ccd16e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 446634, guid: 12ee41758a687f54e98120e486ccd16e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 446634, guid: 12ee41758a687f54e98120e486ccd16e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 450334, guid: 12ee41758a687f54e98120e486ccd16e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5965,6 +6013,18 @@ PrefabInstance:
     - target: {fileID: 450334, guid: 12ee41758a687f54e98120e486ccd16e, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 462580, guid: 12ee41758a687f54e98120e486ccd16e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 462580, guid: 12ee41758a687f54e98120e486ccd16e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 462580, guid: 12ee41758a687f54e98120e486ccd16e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.05
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12ee41758a687f54e98120e486ccd16e, type: 3}
@@ -7834,7 +7894,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 54408815}
-  m_PlaneDistance: 3
+  m_PlaneDistance: 1.5
   m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -9132,7 +9192,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1157740490}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
@@ -10889,6 +10949,17 @@ MonoBehaviour:
       - m_Target: {fileID: 1397346312}
         m_MethodName: OnBtnClick
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1397346307}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -17402,6 +17473,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1397346307}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &2082760119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18222,6 +18304,22 @@ PrefabInstance:
       propertyPath: Drop
       value: 
       objectReference: {fileID: 8178525256802122224, guid: 6c9792ded2a2de44e8b59cafccf06f24,
+        type: 3}
+    - target: {fileID: 8178525256802122226, guid: 6c9792ded2a2de44e8b59cafccf06f24,
+        type: 3}
+      propertyPath: highlightColor.g
+      value: 0.39215687
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178525256802122226, guid: 6c9792ded2a2de44e8b59cafccf06f24,
+        type: 3}
+      propertyPath: highlightColor.b
+      value: 0.019607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178525256802122227, guid: 6c9792ded2a2de44e8b59cafccf06f24,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0fc6e45b60e3a28478c4a08620414704,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c9792ded2a2de44e8b59cafccf06f24, type: 3}

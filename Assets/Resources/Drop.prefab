@@ -88,7 +88,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   containerImage: {fileID: 0}
   receivingImage: {fileID: 8178525256802122227}
-  highlightColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  highlightColor: {r: 1, g: 0.39215687, b: 0.019607844, a: 1}
   DropBox: {fileID: 0}
   CreateDrop: {fileID: 0}
   Drop: {fileID: 0}

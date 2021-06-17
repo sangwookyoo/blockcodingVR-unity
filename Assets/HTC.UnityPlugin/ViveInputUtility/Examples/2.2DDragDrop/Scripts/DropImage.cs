@@ -16,14 +16,14 @@ public class DropImage : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
     
     public void OnEnable()
     {
-        if (containerImage != null)
-            normalColor = containerImage.color;
+        //if (containerImage != null)
+           // normalColor = containerImage.color;
     }
 
     public void OnDrop(PointerEventData data)
     {
         Drop = Resources.Load("Drop") as GameObject;
-        containerImage.color = normalColor;
+        //containerImage.color = normalColor;
 
         if (receivingImage == null)
             return;
@@ -45,6 +45,7 @@ public class DropImage : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
                 
                 gameObject.tag = "MoveZ";
                 gameObject.GetComponent<DropImage>().enabled = false;
+                gameObject.GetComponent<Image>().color = new Color(255, 255, 255, 1);
                 CreateDrops();
 
             }
@@ -53,6 +54,7 @@ public class DropImage : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
                 gameObject.AddComponent<FunctionRotate>().RightRotate();
                 gameObject.tag = "Rotate_R";
                 gameObject.GetComponent<DropImage>().enabled = false;
+                gameObject.GetComponent<Image>().color = new Color(255, 255, 255, 1);
                 CreateDrops();
             }
             if (data.pointerDrag.CompareTag("Rotate_L"))
@@ -60,6 +62,7 @@ public class DropImage : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
                 gameObject.AddComponent<FunctionRotate>().LeftRotate();
                 gameObject.tag = "Rotate_L";
                 gameObject.GetComponent<DropImage>().enabled = false;
+                gameObject.GetComponent<Image>().color = new Color(255, 255, 255, 1);
                 CreateDrops();
             }
             if (data.pointerDrag.CompareTag("Rotate_B"))
@@ -67,6 +70,7 @@ public class DropImage : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
                 gameObject.AddComponent<FunctionRotate>().BackRotate();
                 gameObject.tag = "Rotate_B";
                 gameObject.GetComponent<DropImage>().enabled = false;
+                gameObject.GetComponent<Image>().color = new Color(255, 255, 255, 1);
                 CreateDrops();
             }
             if (data.pointerDrag.CompareTag("Jump"))
@@ -74,13 +78,14 @@ public class DropImage : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
                 gameObject.AddComponent<FunctionJump>().Jump();
                 gameObject.tag = "Jump";
                 gameObject.GetComponent<DropImage>().enabled = false;
+                gameObject.GetComponent<Image>().color = new Color(255, 255, 255, 1);
                 CreateDrops();
             }
             if (data.pointerDrag.CompareTag("For"))
             {
                 gameObject.tag = "For";
                 gameObject.GetComponent<DropImage>().enabled = false;
-
+                gameObject.GetComponent<Image>().color = new Color(255, 255, 255, 1);
                 CreateDropsFor();
             }
         }
@@ -132,7 +137,7 @@ public class DropImage : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
             {
                 gameObject.tag = "For";
                 gameObject.GetComponent<DropImage>().enabled = false;
-
+                gameObject.GetComponent<Image>().color = new Color(255, 255, 255, 1);
                 CreateDropsFor();
             }
         }
@@ -145,8 +150,8 @@ public class DropImage : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
             return;
 
         Sprite dropSprite = GetDropSprite(data);
-        if (dropSprite != null)
-            containerImage.color = highlightColor;
+       // if (dropSprite != null)
+           // containerImage.color = highlightColor;
     }
 
     public void OnPointerExit(PointerEventData data)
@@ -154,7 +159,7 @@ public class DropImage : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
         if (containerImage == null)
             return;
 
-        containerImage.color = normalColor;
+        //containerImage.color = normalColor;
     }
 
     private Sprite GetDropSprite(PointerEventData data)

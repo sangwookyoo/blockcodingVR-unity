@@ -4,13 +4,13 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 
-public class NetworkPlayer : MonoBehaviour
+public class NetworkPlayer : MonoBehaviourPunCallbacks
 {
-    public PhotonView photonView;
+    public PhotonView PV;
 
     void Update()
     {
-        /*if (photonView.IsMine)
+        /*if (PV.IsMine)
         {
             float Move = Input.GetAxis("Vertical") * Time.deltaTime;
             float Rotate = Input.GetAxis("Horizontal") * Time.deltaTime;
@@ -18,8 +18,8 @@ public class NetworkPlayer : MonoBehaviour
             transform.Translate(0, 0, Move);
             transform.Rotate(0, Rotate, 0);
 
-            photonView.RPC("moveRPC", RpcTarget.AllBuffered, Move);
-            photonView.RPC("rotateRPC", RpcTarget.AllBuffered, Rotate);
+            PV.RPC("moveRPC", RpcTarget.All, Move);
+            PV.RPC("rotateRPC", RpcTarget.All, Rotate);
         }
     }
     [PunRPC]

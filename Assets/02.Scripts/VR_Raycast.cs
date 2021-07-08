@@ -14,16 +14,6 @@ namespace Codezero
 
         private SteamVR_LaserPointer laserPointer;
 
-        Vector3 startPosition;
-        Vector3 diffPosition;
-        GameObject canvas_;
-        Transform ParentPos;
-        Vector3 StartPos;
-        FunctionMove FunctionMove;
-        FunctionRotate functionRotate;
-        int Mnum, Rnum;
-        GameObject CloneBlock;
-
         private void OnEnable()
         {
             laserPointer = gameObject.GetComponent<SteamVR_LaserPointer>();
@@ -32,10 +22,10 @@ namespace Codezero
             laserPointer.PointerIn += OnPointerEnter;
             laserPointer.PointerOut += OnPointerExit;
             laserPointer.PointerClick += OnPointerClick;
-            laserPointer.PointerDown += OnPointerDown;
+            /*laserPointer.PointerDown += OnPointerDown;
             laserPointer.Drag += OnDrag;
             laserPointer.EndDrag += OnEndDrag;
-            laserPointer.Drop += OnDrop;
+            laserPointer.Drop += OnDrop;*/
         }
 
         private void OnDisable()
@@ -44,10 +34,10 @@ namespace Codezero
             laserPointer.PointerIn -= OnPointerEnter;
             laserPointer.PointerOut -= OnPointerExit;
             laserPointer.PointerClick -= OnPointerClick;
-            laserPointer.PointerDown -= OnPointerDown;
+            /*laserPointer.PointerDown -= OnPointerDown;
             laserPointer.Drag -= OnDrag;
             laserPointer.EndDrag -= OnEndDrag;
-            laserPointer.Drop -= OnDrop;
+            laserPointer.Drop -= OnDrop;*/
         }
 
         //레이저 포인터가 들어갔을 경우
@@ -82,7 +72,7 @@ namespace Codezero
             clickHandler.OnPointerClick(new PointerEventData(EventSystem.current));
         }
 
-        // 포인터 다운했을 경우
+        /*// 포인터 다운했을 경우
         void OnPointerDown(object sender, PointerEventArgs e)
         {
             IPointerDownHandler downHandler = e.target.GetComponent<IPointerDownHandler>();
@@ -116,6 +106,6 @@ namespace Codezero
             if (dropHandler == null) return;
 
             dropHandler.OnDrop(new PointerEventData(EventSystem.current));
-        }
+        }*/
     }
 }

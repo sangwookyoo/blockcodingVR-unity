@@ -17,6 +17,13 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public List<DefaultRoom> defaultRooms;
     public GameObject roomUI;
 
+    void Start()
+    {
+        PhotonNetwork.GameVersion = "0.1";
+        PhotonNetwork.NickName = "Sungkyul"; // 플레이어 이름
+        PhotonNetwork.AutomaticallySyncScene = true; // 마스터 클라이언트로 동기화
+    }
+
     public void ConnectToServer()
     {
         PhotonNetwork.ConnectUsingSettings();

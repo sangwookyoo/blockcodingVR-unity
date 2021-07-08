@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/01.Scenes/Network/Net3.unity
     guid: f8404e72305bec1418977f5f76bad1af
+  - enabled: 1
+    path: Assets/01.Scenes/Network/Class.unity
+    guid: 02e7fa853af151447aa34cdc526a5127
   m_configObjects: {}

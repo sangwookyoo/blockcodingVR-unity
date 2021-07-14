@@ -139,6 +139,44 @@ namespace Valve.VR
         
         private static SteamVR_Action_Vibration p_htc_viu_viu_vib_01;
         
+        private static SteamVR_Action_Single p_vRIF_LeftGrip;
+        
+        private static SteamVR_Action_Single p_vRIF_RightGrip;
+        
+        private static SteamVR_Action_Boolean p_vRIF_AButton;
+        
+        private static SteamVR_Action_Boolean p_vRIF_BButton;
+        
+        private static SteamVR_Action_Boolean p_vRIF_XButton;
+        
+        private static SteamVR_Action_Boolean p_vRIF_YButton;
+        
+        private static SteamVR_Action_Single p_vRIF_LeftTrigger;
+        
+        private static SteamVR_Action_Single p_vRIF_RightTrigger;
+        
+        private static SteamVR_Action_Boolean p_vRIF_LeftTriggerNear;
+        
+        private static SteamVR_Action_Boolean p_vRIF_RightTriggerNear;
+        
+        private static SteamVR_Action_Vector2 p_vRIF_LeftThumbstickAxis;
+        
+        private static SteamVR_Action_Vector2 p_vRIF_RightThumbstickAxis;
+        
+        private static SteamVR_Action_Boolean p_vRIF_LeftThumbstickNear;
+        
+        private static SteamVR_Action_Boolean p_vRIF_RightThumbstickNear;
+        
+        private static SteamVR_Action_Boolean p_vRIF_LeftThumbstickDown;
+        
+        private static SteamVR_Action_Boolean p_vRIF_RightThumbstickDown;
+        
+        private static SteamVR_Action_Boolean p_vRIF_Start;
+        
+        private static SteamVR_Action_Boolean p_vRIF_Back;
+        
+        private static SteamVR_Action_Vibration p_vRIF_Haptic;
+        
         public static SteamVR_Action_Boolean default_InteractUI
         {
             get
@@ -627,6 +665,158 @@ namespace Valve.VR
             }
         }
         
+        public static SteamVR_Action_Single vRIF_LeftGrip
+        {
+            get
+            {
+                return SteamVR_Actions.p_vRIF_LeftGrip.GetCopy<SteamVR_Action_Single>();
+            }
+        }
+        
+        public static SteamVR_Action_Single vRIF_RightGrip
+        {
+            get
+            {
+                return SteamVR_Actions.p_vRIF_RightGrip.GetCopy<SteamVR_Action_Single>();
+            }
+        }
+        
+        public static SteamVR_Action_Boolean vRIF_AButton
+        {
+            get
+            {
+                return SteamVR_Actions.p_vRIF_AButton.GetCopy<SteamVR_Action_Boolean>();
+            }
+        }
+        
+        public static SteamVR_Action_Boolean vRIF_BButton
+        {
+            get
+            {
+                return SteamVR_Actions.p_vRIF_BButton.GetCopy<SteamVR_Action_Boolean>();
+            }
+        }
+        
+        public static SteamVR_Action_Boolean vRIF_XButton
+        {
+            get
+            {
+                return SteamVR_Actions.p_vRIF_XButton.GetCopy<SteamVR_Action_Boolean>();
+            }
+        }
+        
+        public static SteamVR_Action_Boolean vRIF_YButton
+        {
+            get
+            {
+                return SteamVR_Actions.p_vRIF_YButton.GetCopy<SteamVR_Action_Boolean>();
+            }
+        }
+        
+        public static SteamVR_Action_Single vRIF_LeftTrigger
+        {
+            get
+            {
+                return SteamVR_Actions.p_vRIF_LeftTrigger.GetCopy<SteamVR_Action_Single>();
+            }
+        }
+        
+        public static SteamVR_Action_Single vRIF_RightTrigger
+        {
+            get
+            {
+                return SteamVR_Actions.p_vRIF_RightTrigger.GetCopy<SteamVR_Action_Single>();
+            }
+        }
+        
+        public static SteamVR_Action_Boolean vRIF_LeftTriggerNear
+        {
+            get
+            {
+                return SteamVR_Actions.p_vRIF_LeftTriggerNear.GetCopy<SteamVR_Action_Boolean>();
+            }
+        }
+        
+        public static SteamVR_Action_Boolean vRIF_RightTriggerNear
+        {
+            get
+            {
+                return SteamVR_Actions.p_vRIF_RightTriggerNear.GetCopy<SteamVR_Action_Boolean>();
+            }
+        }
+        
+        public static SteamVR_Action_Vector2 vRIF_LeftThumbstickAxis
+        {
+            get
+            {
+                return SteamVR_Actions.p_vRIF_LeftThumbstickAxis.GetCopy<SteamVR_Action_Vector2>();
+            }
+        }
+        
+        public static SteamVR_Action_Vector2 vRIF_RightThumbstickAxis
+        {
+            get
+            {
+                return SteamVR_Actions.p_vRIF_RightThumbstickAxis.GetCopy<SteamVR_Action_Vector2>();
+            }
+        }
+        
+        public static SteamVR_Action_Boolean vRIF_LeftThumbstickNear
+        {
+            get
+            {
+                return SteamVR_Actions.p_vRIF_LeftThumbstickNear.GetCopy<SteamVR_Action_Boolean>();
+            }
+        }
+        
+        public static SteamVR_Action_Boolean vRIF_RightThumbstickNear
+        {
+            get
+            {
+                return SteamVR_Actions.p_vRIF_RightThumbstickNear.GetCopy<SteamVR_Action_Boolean>();
+            }
+        }
+        
+        public static SteamVR_Action_Boolean vRIF_LeftThumbstickDown
+        {
+            get
+            {
+                return SteamVR_Actions.p_vRIF_LeftThumbstickDown.GetCopy<SteamVR_Action_Boolean>();
+            }
+        }
+        
+        public static SteamVR_Action_Boolean vRIF_RightThumbstickDown
+        {
+            get
+            {
+                return SteamVR_Actions.p_vRIF_RightThumbstickDown.GetCopy<SteamVR_Action_Boolean>();
+            }
+        }
+        
+        public static SteamVR_Action_Boolean vRIF_Start
+        {
+            get
+            {
+                return SteamVR_Actions.p_vRIF_Start.GetCopy<SteamVR_Action_Boolean>();
+            }
+        }
+        
+        public static SteamVR_Action_Boolean vRIF_Back
+        {
+            get
+            {
+                return SteamVR_Actions.p_vRIF_Back.GetCopy<SteamVR_Action_Boolean>();
+            }
+        }
+        
+        public static SteamVR_Action_Vibration vRIF_Haptic
+        {
+            get
+            {
+                return SteamVR_Actions.p_vRIF_Haptic.GetCopy<SteamVR_Action_Vibration>();
+            }
+        }
+        
         private static void InitializeActionArrays()
         {
             Valve.VR.SteamVR_Input.actions = new Valve.VR.SteamVR_Action[] {
@@ -690,7 +880,26 @@ namespace Valve.VR
                     SteamVR_Actions.htc_viu_viu_axis_2xy,
                     SteamVR_Actions.htc_viu_viu_axis_3xy,
                     SteamVR_Actions.htc_viu_viu_axis_4xy,
-                    SteamVR_Actions.htc_viu_viu_vib_01};
+                    SteamVR_Actions.htc_viu_viu_vib_01,
+                    SteamVR_Actions.vRIF_LeftGrip,
+                    SteamVR_Actions.vRIF_RightGrip,
+                    SteamVR_Actions.vRIF_AButton,
+                    SteamVR_Actions.vRIF_BButton,
+                    SteamVR_Actions.vRIF_XButton,
+                    SteamVR_Actions.vRIF_YButton,
+                    SteamVR_Actions.vRIF_LeftTrigger,
+                    SteamVR_Actions.vRIF_RightTrigger,
+                    SteamVR_Actions.vRIF_LeftTriggerNear,
+                    SteamVR_Actions.vRIF_RightTriggerNear,
+                    SteamVR_Actions.vRIF_LeftThumbstickAxis,
+                    SteamVR_Actions.vRIF_RightThumbstickAxis,
+                    SteamVR_Actions.vRIF_LeftThumbstickNear,
+                    SteamVR_Actions.vRIF_RightThumbstickNear,
+                    SteamVR_Actions.vRIF_LeftThumbstickDown,
+                    SteamVR_Actions.vRIF_RightThumbstickDown,
+                    SteamVR_Actions.vRIF_Start,
+                    SteamVR_Actions.vRIF_Back,
+                    SteamVR_Actions.vRIF_Haptic};
             Valve.VR.SteamVR_Input.actionsIn = new Valve.VR.ISteamVR_Action_In[] {
                     SteamVR_Actions.default_InteractUI,
                     SteamVR_Actions.default_Teleport,
@@ -750,13 +959,33 @@ namespace Valve.VR
                     SteamVR_Actions.htc_viu_viu_axis_1xy,
                     SteamVR_Actions.htc_viu_viu_axis_2xy,
                     SteamVR_Actions.htc_viu_viu_axis_3xy,
-                    SteamVR_Actions.htc_viu_viu_axis_4xy};
+                    SteamVR_Actions.htc_viu_viu_axis_4xy,
+                    SteamVR_Actions.vRIF_LeftGrip,
+                    SteamVR_Actions.vRIF_RightGrip,
+                    SteamVR_Actions.vRIF_AButton,
+                    SteamVR_Actions.vRIF_BButton,
+                    SteamVR_Actions.vRIF_XButton,
+                    SteamVR_Actions.vRIF_YButton,
+                    SteamVR_Actions.vRIF_LeftTrigger,
+                    SteamVR_Actions.vRIF_RightTrigger,
+                    SteamVR_Actions.vRIF_LeftTriggerNear,
+                    SteamVR_Actions.vRIF_RightTriggerNear,
+                    SteamVR_Actions.vRIF_LeftThumbstickAxis,
+                    SteamVR_Actions.vRIF_RightThumbstickAxis,
+                    SteamVR_Actions.vRIF_LeftThumbstickNear,
+                    SteamVR_Actions.vRIF_RightThumbstickNear,
+                    SteamVR_Actions.vRIF_LeftThumbstickDown,
+                    SteamVR_Actions.vRIF_RightThumbstickDown,
+                    SteamVR_Actions.vRIF_Start,
+                    SteamVR_Actions.vRIF_Back};
             Valve.VR.SteamVR_Input.actionsOut = new Valve.VR.ISteamVR_Action_Out[] {
                     SteamVR_Actions.default_Haptic,
-                    SteamVR_Actions.htc_viu_viu_vib_01};
+                    SteamVR_Actions.htc_viu_viu_vib_01,
+                    SteamVR_Actions.vRIF_Haptic};
             Valve.VR.SteamVR_Input.actionsVibration = new Valve.VR.SteamVR_Action_Vibration[] {
                     SteamVR_Actions.default_Haptic,
-                    SteamVR_Actions.htc_viu_viu_vib_01};
+                    SteamVR_Actions.htc_viu_viu_vib_01,
+                    SteamVR_Actions.vRIF_Haptic};
             Valve.VR.SteamVR_Input.actionsPose = new Valve.VR.SteamVR_Action_Pose[] {
                     SteamVR_Actions.default_Pose,
                     SteamVR_Actions.mixedreality_ExternalCamera};
@@ -796,7 +1025,19 @@ namespace Valve.VR
                     SteamVR_Actions.htc_viu_viu_touch_32,
                     SteamVR_Actions.htc_viu_viu_touch_33,
                     SteamVR_Actions.htc_viu_viu_touch_34,
-                    SteamVR_Actions.htc_viu_viu_touch_35};
+                    SteamVR_Actions.htc_viu_viu_touch_35,
+                    SteamVR_Actions.vRIF_AButton,
+                    SteamVR_Actions.vRIF_BButton,
+                    SteamVR_Actions.vRIF_XButton,
+                    SteamVR_Actions.vRIF_YButton,
+                    SteamVR_Actions.vRIF_LeftTriggerNear,
+                    SteamVR_Actions.vRIF_RightTriggerNear,
+                    SteamVR_Actions.vRIF_LeftThumbstickNear,
+                    SteamVR_Actions.vRIF_RightThumbstickNear,
+                    SteamVR_Actions.vRIF_LeftThumbstickDown,
+                    SteamVR_Actions.vRIF_RightThumbstickDown,
+                    SteamVR_Actions.vRIF_Start,
+                    SteamVR_Actions.vRIF_Back};
             Valve.VR.SteamVR_Input.actionsSingle = new Valve.VR.SteamVR_Action_Single[] {
                     SteamVR_Actions.default_Squeeze,
                     SteamVR_Actions.buggy_Throttle,
@@ -809,7 +1050,11 @@ namespace Valve.VR
                     SteamVR_Actions.htc_viu_viu_axis_3x,
                     SteamVR_Actions.htc_viu_viu_axis_3y,
                     SteamVR_Actions.htc_viu_viu_axis_4x,
-                    SteamVR_Actions.htc_viu_viu_axis_4y};
+                    SteamVR_Actions.htc_viu_viu_axis_4y,
+                    SteamVR_Actions.vRIF_LeftGrip,
+                    SteamVR_Actions.vRIF_RightGrip,
+                    SteamVR_Actions.vRIF_LeftTrigger,
+                    SteamVR_Actions.vRIF_RightTrigger};
             Valve.VR.SteamVR_Input.actionsVector2 = new Valve.VR.SteamVR_Action_Vector2[] {
                     SteamVR_Actions.platformer_Move,
                     SteamVR_Actions.buggy_Steering,
@@ -817,7 +1062,9 @@ namespace Valve.VR
                     SteamVR_Actions.htc_viu_viu_axis_1xy,
                     SteamVR_Actions.htc_viu_viu_axis_2xy,
                     SteamVR_Actions.htc_viu_viu_axis_3xy,
-                    SteamVR_Actions.htc_viu_viu_axis_4xy};
+                    SteamVR_Actions.htc_viu_viu_axis_4xy,
+                    SteamVR_Actions.vRIF_LeftThumbstickAxis,
+                    SteamVR_Actions.vRIF_RightThumbstickAxis};
             Valve.VR.SteamVR_Input.actionsVector3 = new Valve.VR.SteamVR_Action_Vector3[0];
             Valve.VR.SteamVR_Input.actionsSkeleton = new Valve.VR.SteamVR_Action_Skeleton[] {
                     SteamVR_Actions.default_SkeletonLeftHand,
@@ -877,7 +1124,25 @@ namespace Valve.VR
                     SteamVR_Actions.htc_viu_viu_axis_1xy,
                     SteamVR_Actions.htc_viu_viu_axis_2xy,
                     SteamVR_Actions.htc_viu_viu_axis_3xy,
-                    SteamVR_Actions.htc_viu_viu_axis_4xy};
+                    SteamVR_Actions.htc_viu_viu_axis_4xy,
+                    SteamVR_Actions.vRIF_LeftGrip,
+                    SteamVR_Actions.vRIF_RightGrip,
+                    SteamVR_Actions.vRIF_AButton,
+                    SteamVR_Actions.vRIF_BButton,
+                    SteamVR_Actions.vRIF_XButton,
+                    SteamVR_Actions.vRIF_YButton,
+                    SteamVR_Actions.vRIF_LeftTrigger,
+                    SteamVR_Actions.vRIF_RightTrigger,
+                    SteamVR_Actions.vRIF_LeftTriggerNear,
+                    SteamVR_Actions.vRIF_RightTriggerNear,
+                    SteamVR_Actions.vRIF_LeftThumbstickAxis,
+                    SteamVR_Actions.vRIF_RightThumbstickAxis,
+                    SteamVR_Actions.vRIF_LeftThumbstickNear,
+                    SteamVR_Actions.vRIF_RightThumbstickNear,
+                    SteamVR_Actions.vRIF_LeftThumbstickDown,
+                    SteamVR_Actions.vRIF_RightThumbstickDown,
+                    SteamVR_Actions.vRIF_Start,
+                    SteamVR_Actions.vRIF_Back};
         }
         
         private static void PreInitActions()
@@ -943,6 +1208,25 @@ namespace Valve.VR
             SteamVR_Actions.p_htc_viu_viu_axis_3xy = ((SteamVR_Action_Vector2)(SteamVR_Action.Create<SteamVR_Action_Vector2>("/actions/htc_viu/in/viu_axis_3xy")));
             SteamVR_Actions.p_htc_viu_viu_axis_4xy = ((SteamVR_Action_Vector2)(SteamVR_Action.Create<SteamVR_Action_Vector2>("/actions/htc_viu/in/viu_axis_4xy")));
             SteamVR_Actions.p_htc_viu_viu_vib_01 = ((SteamVR_Action_Vibration)(SteamVR_Action.Create<SteamVR_Action_Vibration>("/actions/htc_viu/out/viu_vib_01")));
+            SteamVR_Actions.p_vRIF_LeftGrip = ((SteamVR_Action_Single)(SteamVR_Action.Create<SteamVR_Action_Single>("/actions/VRIF/in/LeftGrip")));
+            SteamVR_Actions.p_vRIF_RightGrip = ((SteamVR_Action_Single)(SteamVR_Action.Create<SteamVR_Action_Single>("/actions/VRIF/in/RightGrip")));
+            SteamVR_Actions.p_vRIF_AButton = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/VRIF/in/AButton")));
+            SteamVR_Actions.p_vRIF_BButton = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/VRIF/in/BButton")));
+            SteamVR_Actions.p_vRIF_XButton = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/VRIF/in/XButton")));
+            SteamVR_Actions.p_vRIF_YButton = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/VRIF/in/YButton")));
+            SteamVR_Actions.p_vRIF_LeftTrigger = ((SteamVR_Action_Single)(SteamVR_Action.Create<SteamVR_Action_Single>("/actions/VRIF/in/LeftTrigger")));
+            SteamVR_Actions.p_vRIF_RightTrigger = ((SteamVR_Action_Single)(SteamVR_Action.Create<SteamVR_Action_Single>("/actions/VRIF/in/RightTrigger")));
+            SteamVR_Actions.p_vRIF_LeftTriggerNear = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/VRIF/in/LeftTriggerNear")));
+            SteamVR_Actions.p_vRIF_RightTriggerNear = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/VRIF/in/RightTriggerNear")));
+            SteamVR_Actions.p_vRIF_LeftThumbstickAxis = ((SteamVR_Action_Vector2)(SteamVR_Action.Create<SteamVR_Action_Vector2>("/actions/VRIF/in/LeftThumbstickAxis")));
+            SteamVR_Actions.p_vRIF_RightThumbstickAxis = ((SteamVR_Action_Vector2)(SteamVR_Action.Create<SteamVR_Action_Vector2>("/actions/VRIF/in/RightThumbstickAxis")));
+            SteamVR_Actions.p_vRIF_LeftThumbstickNear = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/VRIF/in/LeftThumbstickNear")));
+            SteamVR_Actions.p_vRIF_RightThumbstickNear = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/VRIF/in/RightThumbstickNear")));
+            SteamVR_Actions.p_vRIF_LeftThumbstickDown = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/VRIF/in/LeftThumbstickDown")));
+            SteamVR_Actions.p_vRIF_RightThumbstickDown = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/VRIF/in/RightThumbstickDown")));
+            SteamVR_Actions.p_vRIF_Start = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/VRIF/in/Start")));
+            SteamVR_Actions.p_vRIF_Back = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/VRIF/in/Back")));
+            SteamVR_Actions.p_vRIF_Haptic = ((SteamVR_Action_Vibration)(SteamVR_Action.Create<SteamVR_Action_Vibration>("/actions/VRIF/out/Haptic")));
         }
     }
 }

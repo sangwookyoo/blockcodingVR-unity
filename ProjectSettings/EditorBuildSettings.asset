@@ -5,19 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/01.Scenes/02.Menu.unity
     guid: a5d2ede4915943747a85523d9a4fe6df
-  - enabled: 1
-    path: Assets/01.Scenes/LoadScene/Learn1.unity
-    guid: e1b3a31f4b0c91c46a08a0ea9104ce86
-  - enabled: 1
+  - enabled: 0
     path: Assets/01.Scenes/03.Learn1.unity
     guid: cdbd748589465a343ac199c5bed4b666
-  - enabled: 1
-    path: Assets/01.Scenes/LoadScene/Learn2.unity
-    guid: 502bda78631752f4791e3f97b0fa3b24
-  - enabled: 1
+  - enabled: 0
     path: Assets/01.Scenes/04.Learn2.unity
     guid: 5e4997830f166aa45b8707bdc1807a2a
   - enabled: 1
@@ -39,15 +33,21 @@ EditorBuildSettings:
     path: Assets/01.Scenes/07.Learn5.unity
     guid: 571012313ba0954428315a34c945ee50
   - enabled: 1
-    path: Assets/01.Scenes/Network/Net1.unity
-    guid: 22112c00a5634494996d64ff9f004047
-  - enabled: 1
-    path: Assets/01.Scenes/Network/Net2.unity
-    guid: 7910d21e341e60340bda3059ceeddc8b
-  - enabled: 1
-    path: Assets/01.Scenes/Network/Net3.unity
-    guid: f8404e72305bec1418977f5f76bad1af
-  - enabled: 1
     path: Assets/01.Scenes/Network/Class.unity
     guid: 02e7fa853af151447aa34cdc526a5127
-  m_configObjects: {}
+  - enabled: 0
+    path: Assets/01.Scenes/Network/Net1.unity
+    guid: 22112c00a5634494996d64ff9f004047
+  - enabled: 0
+    path: Assets/01.Scenes/Network/Net2.unity
+    guid: 7910d21e341e60340bda3059ceeddc8b
+  - enabled: 0
+    path: Assets/01.Scenes/Network/Net3.unity
+    guid: f8404e72305bec1418977f5f76bad1af
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: b3ac24369c63cb246976bcaf96adab11,
+      type: 2}
+    Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: 2ec24d39f7b5ac84aad7e5df7b4fd3ea,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 323b4aa9e5dcdbd4db3ff1b151298c0e,
+      type: 2}

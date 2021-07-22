@@ -1,0 +1,145 @@
+{
+  "actions": [
+    {
+      "name": "/actions/VRIF/in/LeftGrip",
+      "type": "vector1"
+    },
+    {
+      "name": "/actions/VRIF/in/RightGrip",
+      "type": "vector1"
+    },
+    {
+      "name": "/actions/VRIF/in/AButton",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/VRIF/in/BButton",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/VRIF/in/XButton",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/VRIF/in/YButton",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/VRIF/in/LeftTrigger",
+      "type": "vector1"
+    },
+    {
+      "name": "/actions/VRIF/in/RightTrigger",
+      "type": "vector1"
+    },
+    {
+      "name": "/actions/VRIF/in/LeftTriggerNear",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/VRIF/in/RightTriggerNear",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/VRIF/in/LeftThumbstickAxis",
+      "type": "vector2"
+    },
+    {
+      "name": "/actions/VRIF/in/RightThumbstickAxis",
+      "type": "vector2"
+    },
+    {
+      "name": "/actions/VRIF/in/LeftThumbstickNear",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/VRIF/in/RightThumbstickNear",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/VRIF/in/LeftThumbstickDown",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/VRIF/in/RightThumbstickDown",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/VRIF/in/Start",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/VRIF/in/Back",
+      "type": "boolean",
+      "requirement": "optional"
+    },
+    {
+      "name": "/actions/VRIF/out/Haptic",
+      "type": "vibration"
+    }
+  ],
+  "action_sets": [
+    {
+      "name": "/actions/VRIF",
+      "usage": "leftright"
+    }
+  ],
+  "default_bindings": [
+    {
+      "controller_type": "vive_controller",
+      "binding_url": "bindings_vive_controller.json"
+    },
+    {
+      "controller_type": "oculus_touch",
+      "binding_url": "bindings_oculus_touch.json"
+    },
+    {
+      "controller_type": "knuckles",
+      "binding_url": "bindings_knuckles.json"
+    },
+    {
+      "controller_type": "holographic_controller",
+      "binding_url": "bindings_holographic_controller.json"
+    },
+    {
+      "controller_type": "vive_cosmos_controller",
+      "binding_url": "bindings_vive_cosmos_controller.json"
+    },
+    {
+      "controller_type": "vive_cosmos",
+      "binding_url": "binding_vive_cosmos.json"
+    },
+    {
+      "controller_type": "vive",
+      "binding_url": "binding_vive.json"
+    },
+    {
+      "controller_type": "indexhmd",
+      "binding_url": "binding_index_hmd.json"
+    },
+    {
+      "controller_type": "vive_pro",
+      "binding_url": "binding_vive_pro.json"
+    },
+    {
+      "controller_type": "rift",
+      "binding_url": "binding_rift.json"
+    },
+    {
+      "controller_type": "holographic_hmd",
+      "binding_url": "binding_holographic_hmd.json"
+    },
+    {
+      "controller_type": "vive_tracker_camera",
+      "binding_url": "binding_vive_tracker_camera.json"
+    }
+  ],
+  "localization": [
+    {
+      "language_tag": "en_US"
+    }
+  ]
+}

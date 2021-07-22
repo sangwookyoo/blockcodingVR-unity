@@ -1196,6 +1196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   person: 0
   MaxPerson: 2
+  SendText: {fileID: 0}
 --- !u!114 &411236582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1415,6 +1416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   person: 0
   MaxPerson: 10
+  SendText: {fileID: 0}
 --- !u!114 &526469341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1833,6 +1835,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   person: 0
   MaxPerson: 2
+  SendText: {fileID: 0}
 --- !u!114 &910676134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3770,6 +3773,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   person: 0
   MaxPerson: 2
+  SendText: {fileID: 0}
 --- !u!114 &1842736187
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -19,13 +19,25 @@ EditorBuildSettings:
     guid: 502bda78631752f4791e3f97b0fa3b24
   - enabled: 1
     path: Assets/01.Scenes/04.Learn2.unity
-    guid: be707ecaa5ed61f458706e3cffa751dd
+    guid: 5e4997830f166aa45b8707bdc1807a2a
   - enabled: 1
     path: Assets/01.Scenes/LoadScene/Learn3.unity
     guid: ec4dbd786877f4944b876097382a34e5
   - enabled: 1
     path: Assets/01.Scenes/05.Learn3.unity
-    guid: a0f2bbf7322001c47a6838478de88724
+    guid: 72a800eaf9a51334085b7fda6b33e5c5
+  - enabled: 1
+    path: Assets/01.Scenes/LoadScene/Learn4.unity
+    guid: fd991ea11d898534db05fe9ab08ea3fa
+  - enabled: 1
+    path: Assets/01.Scenes/06.Learn4.unity
+    guid: a7fb057ddb46f2144a015d35cb42730c
+  - enabled: 1
+    path: Assets/01.Scenes/LoadScene/Learn5.unity
+    guid: 19864c3c42de7f44f92c720e0bbacc4e
+  - enabled: 1
+    path: Assets/01.Scenes/07.Learn5.unity
+    guid: 571012313ba0954428315a34c945ee50
   - enabled: 1
     path: Assets/01.Scenes/Network/Net1.unity
     guid: 22112c00a5634494996d64ff9f004047

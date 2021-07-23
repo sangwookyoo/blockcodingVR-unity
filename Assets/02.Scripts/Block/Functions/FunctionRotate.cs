@@ -13,7 +13,6 @@ public class FunctionRotate : MonoBehaviour
     private float startTime;
 
     public bool moveCheck = false;
-    public int num;
     public Vector3 StartPos;
     public Animator Move;
     public void Start()

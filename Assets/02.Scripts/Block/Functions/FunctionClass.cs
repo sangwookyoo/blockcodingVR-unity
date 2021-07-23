@@ -21,11 +21,11 @@ public class FunctionClass : MonoBehaviour
         int nSize = transform.childCount;
         for (int i = 0; i < nSize; i++)
         {
-            Child = transform.GetChild(i).gameObject; // Panel Main Loop의 자식오브젝트 저장
-            FunctionMove FunctionMove = Child.GetComponent<FunctionMove>();  //자식오브젝트의 FunctionMove 함수 불러오기
+            Child = transform.GetChild(i).gameObject; 
+            FunctionMove FunctionMove = Child.GetComponent<FunctionMove>(); 
             FunctionJump FunctionJump = Child.GetComponent<FunctionJump>();
-            FunctionRotate FunctionRotate = Child.GetComponent<FunctionRotate>();  //자식오브젝트의 FunctionRotate 함수 불러오기
-            FunctionFor FunctionFor = Child.GetComponent<FunctionFor>(); //자식오브젝트의 FunctionFor 함수 불러오기
+            FunctionRotate FunctionRotate = Child.GetComponent<FunctionRotate>();  
+            FunctionFor FunctionFor = Child.GetComponent<FunctionFor>(); 
             FunctionClass FunctionClass = Child.GetComponent<FunctionClass>();
 
             if (FunctionMove)   //FunctionMove 즉, 이동 블록일때 실행

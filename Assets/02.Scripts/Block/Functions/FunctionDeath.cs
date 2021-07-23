@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FunctionDeath : MonoBehaviour
 {
+    
     Animator animator;
     public bool PlayerDeath;//죽는 애니메이션 실행 bool
     public bool DeathCheck; //죽었는지 체크

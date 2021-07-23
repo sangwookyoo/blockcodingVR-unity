@@ -11,6 +11,11 @@ public class FunctionRotate : MonoBehaviour
     public Transform sunset;
     public float journeyTime = 1.0F;
     private float startTime;
+
+    public bool moveCheck = false;
+    public int num;
+    public Vector3 StartPos;
+    public Animator Move;
     public void Start()
     {
         num = 1;
@@ -36,6 +41,33 @@ public class FunctionRotate : MonoBehaviour
     //    yield return new WaitForSeconds(0.3f);
     //}
 
+
+    public IEnumerator MoveZ()
+    {
+        GameObject player;
+        player = GameObject.FindGameObjectWithTag("Player");
+        StartPos = player.transform.position;
+        Animator animator = player.GetComponent<Animator>();
+        animator.SetBool("Walk", true);
+        FunctionDeath FunctionDeath = FindObjectOfType<FunctionDeath>();
+        while (true)
+        {
+            player.transform.Translate(0, 0, 5 * Time.deltaTime * 0.7f);
+            if (FunctionDeath.PlayerDeath == true)
+            {
+                break;
+            }
+            if ((Mathf.Abs(StartPos.z - player.transform.position.z) >= 5)
+                || (Mathf.Abs(StartPos.x - player.transform.position.x) >= 5)
+                || (Mathf.Abs(StartPos.y - player.transform.position.y) >= 5))
+            {
+                animator.SetBool("Walk", false);
+                break;
+            }
+            yield return null;
+        }
+    }
+
     public IEnumerator RightRotate() ///오른쪽으로 90도 회전
     {
         GameObject player;
@@ -56,7 +88,6 @@ public class FunctionRotate : MonoBehaviour
             }
             yield return null;
         } 
-        //yield return new WaitForSeconds(0.3f);
     }
 
     public IEnumerator LeftRotate() ///왼쪽으로 90도 회전

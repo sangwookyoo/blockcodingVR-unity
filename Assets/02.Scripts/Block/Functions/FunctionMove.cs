@@ -26,20 +26,19 @@ public class FunctionMove : MonoBehaviour
         while (true)
         {
             player.transform.Translate(0, 0, 5 * Time.deltaTime * 0.7f);
-            if(FunctionDeath.PlayerDeath == true) // 죽었으면 그만 앞으로 가라
+            if(FunctionDeath.PlayerDeath == true) 
             {
                 break;
             }
-            if((Mathf.Abs(StartPos.z - player.transform.position.z) >= 5) || (Mathf.Abs(StartPos.x - player.transform.position.x) >= 5) || (Mathf.Abs(StartPos.y - player.transform.position.y)>=5)) // 5 이동했으면 그만 멈춰라
+            if((Mathf.Abs(StartPos.z - player.transform.position.z) >= 5) 
+                || (Mathf.Abs(StartPos.x - player.transform.position.x) >= 5)
+                || (Mathf.Abs(StartPos.y - player.transform.position.y)>=5))
             {
                 animator.SetBool("Walk", false);
                 break;
             }
             yield return null;
         }
-        
-        //yield return new WaitForSeconds(0.3f);
-        //Debug.Log("Move");
     }
 
 }

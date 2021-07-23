@@ -11,7 +11,9 @@ public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         base.OnJoinedRoom();
-        spawnedPlayerPrefab = PhotonNetwork.Instantiate("Player", transform.position, transform.rotation);
+        Vector3 randPos = Random.insideUnitSphere * 10;
+        randPos.y = 0;
+        spawnedPlayerPrefab = PhotonNetwork.Instantiate("Player", randPos, Quaternion.identity);
     }
 
     public override void OnLeftRoom()

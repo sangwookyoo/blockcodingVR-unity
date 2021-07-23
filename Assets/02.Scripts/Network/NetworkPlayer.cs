@@ -4,33 +4,29 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 
-public class NetworkPlayer : MonoBehaviourPunCallbacks
+public class NetworkPlayer : MonoBehaviourPun
 {
-    public PhotonView PV;
+    public Camera _camera;
+
+    void Start()
+    {
+
+        if (photonView.IsMine)
+        {
+            _camera.tag = "MainCamera";
+            AudioListener.volume = 1;
+        }
+        else
+        {
+            _camera.enabled = false;
+        }
+    }
 
     void Update()
     {
-        /*if (PV.IsMine)
+        if (!photonView.IsMine)
         {
-            float Move = Input.GetAxis("Vertical") * Time.deltaTime;
-            float Rotate = Input.GetAxis("Horizontal") * Time.deltaTime;
-
-            transform.Translate(0, 0, Move);
-            transform.Rotate(0, Rotate, 0);
-
-            PV.RPC("moveRPC", RpcTarget.All, Move);
-            PV.RPC("rotateRPC", RpcTarget.All, Rotate);
+            return;
         }
-    }
-    [PunRPC]
-    void moveRPC(float MoveRPC)
-    {
-        float Move = Input.GetAxis("Vertical");
-    }
-    [PunRPC]
-    void rotateRPC(float RotateRPC)
-    {
-        float Rotate = Input.GetAxis("Horizontal");
-    }*/
     }
 }

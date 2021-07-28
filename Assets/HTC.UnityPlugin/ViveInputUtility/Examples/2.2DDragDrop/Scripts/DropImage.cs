@@ -39,44 +39,46 @@ public class DropImage : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
                 receivingImage.overrideSprite = dropSprite;
 
             Debug.Log(receivingImage.overrideSprite);
+
+            gameObject.GetComponent<Image>().sprite = receivingImage.overrideSprite;
             if (data.pointerDrag.CompareTag("MoveZ"))
             {
-                gameObject.AddComponent<FunctionMove>();
-                
                 gameObject.tag = "MoveZ";
+                gameObject.AddComponent<FunctionMove>();
                 gameObject.GetComponent<DropImage>().enabled = false;
                 gameObject.GetComponent<Image>().color = new Color(255, 255, 255, 1);
+                gameObject.AddComponent<DragImage>();
                 CreateDrops();
 
             }
             if (data.pointerDrag.CompareTag("Rotate_R"))
             {
-                gameObject.AddComponent<FunctionRotate>().RightRotate();
                 gameObject.tag = "Rotate_R";
+                gameObject.AddComponent<FunctionRotate>().RightRotate();
                 gameObject.GetComponent<DropImage>().enabled = false;
                 gameObject.GetComponent<Image>().color = new Color(255, 255, 255, 1);
                 CreateDrops();
             }
             if (data.pointerDrag.CompareTag("Rotate_L"))
             {
-                gameObject.AddComponent<FunctionRotate>().LeftRotate();
                 gameObject.tag = "Rotate_L";
+                gameObject.AddComponent<FunctionRotate>().LeftRotate();
                 gameObject.GetComponent<DropImage>().enabled = false;
                 gameObject.GetComponent<Image>().color = new Color(255, 255, 255, 1);
                 CreateDrops();
             }
             if (data.pointerDrag.CompareTag("Rotate_B"))
             {
-                gameObject.AddComponent<FunctionRotate>().BackRotate();
                 gameObject.tag = "Rotate_B";
+                gameObject.AddComponent<FunctionRotate>().BackRotate();
                 gameObject.GetComponent<DropImage>().enabled = false;
                 gameObject.GetComponent<Image>().color = new Color(255, 255, 255, 1);
                 CreateDrops();
             }
             if (data.pointerDrag.CompareTag("Jump"))
             {
-                gameObject.AddComponent<FunctionJump>().Jump();
                 gameObject.tag = "Jump";
+                gameObject.AddComponent<FunctionJump>().Jump();
                 gameObject.GetComponent<DropImage>().enabled = false;
                 gameObject.GetComponent<Image>().color = new Color(255, 255, 255, 1);
                 CreateDrops();
@@ -165,6 +167,7 @@ public class DropImage : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
     private Sprite GetDropSprite(PointerEventData data)
     {
         var originalObj = data.pointerDrag;
+        
         if (originalObj == null)
             return null;
 

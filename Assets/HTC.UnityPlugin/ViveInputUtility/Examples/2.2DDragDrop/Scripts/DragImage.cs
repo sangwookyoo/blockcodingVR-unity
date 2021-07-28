@@ -7,10 +7,15 @@ using UnityEngine.UI;
 public class DragImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public bool dragOnSurfaces = true;
+    public bool isDropBox;
 
     private Dictionary<int, GameObject> m_DraggingIcons = new Dictionary<int, GameObject>();
     private Dictionary<int, RectTransform> m_DraggingPlanes = new Dictionary<int, RectTransform>();
 
+    bool isTrash = false;
+
+ 
+ 
     public void OnBeginDrag(PointerEventData eventData)
     {
         var canvas = transform.parent == null ? null : transform.parent.GetComponentInParent<Canvas>();
@@ -38,6 +43,19 @@ public class DragImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         m_DraggingPlanes[eventData.pointerId] = canvas.GetComponent<RectTransform>();
 
         SetDraggedPosition(eventData);
+        //bool isDropBox;
+        if (gameObject.transform.parent.CompareTag("Drop") && gameObject.GetComponent<CanvasGroup>() == null)
+        {
+            isDropBox = true;
+            gameObject.AddComponent<CanvasGroup>().alpha = 0;
+            Debug.Log("isdropbox : " + isDropBox);
+        }
+        else if(gameObject.transform.parent.CompareTag("Drop") && gameObject.GetComponent<CanvasGroup>() != null)
+        {
+            isDropBox = true;
+            gameObject.GetComponent<CanvasGroup>().alpha = 0;
+            Debug.Log("isdropbox : " + isDropBox);
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -91,5 +109,11 @@ public class DragImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         }
 
         m_DraggingIcons[eventData.pointerId] = null;
+        if (gameObject.transform.parent.CompareTag("Drop"))
+        {
+            Debug.Log("DropBox");
+            isDropBox = true;
+            gameObject.GetComponent<CanvasGroup>().alpha = 1;
+        }
     }
 }

@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Wall
+  - Rotate_B
+  - MoveZ
+  - Rotate_R
+  - Rotate_L
+  - For
+  - Jump
+  - projectile
+  - Drop
+  - Trash
   layers:
   - Default
   - TransparentFX

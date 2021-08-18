@@ -4321,7 +4321,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: a8e2abe10d5fb984a8237fbfbcef369f,
         type: 3}
       propertyPath: m_Name
-      value: Player (1)
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: a8e2abe10d5fb984a8237fbfbcef369f,
         type: 3}
@@ -7072,7 +7072,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 586830631}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.25, y: -1.149, z: -94.95}
+  m_LocalPosition: {x: 11.25, y: 0.554, z: -94.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1628835297}
@@ -9593,6 +9593,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 882145023}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &885012476 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 400214409374686057, guid: 966bd137c518d6e4999d9bbdbad184d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1628835296}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &888259291 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 470920, guid: 2e76569136e6f614d982c9f0eb8df167,
@@ -10664,6 +10670,8 @@ MonoBehaviour:
   SteamVRPlayer: {fileID: 586830631}
   Bow: {fileID: 1387200371}
   Monster: {fileID: 1000833436}
+  Camera_1: {fileID: 1366146310}
+  Camera_3: {fileID: 885012476}
 --- !u!65 &987030826
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14437,17 +14445,17 @@ PrefabInstance:
     - target: {fileID: 8612648094514515512, guid: 8592849bb11137d47b6c86da895e295c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.5
+      value: -14.23
       objectReference: {fileID: 0}
     - target: {fileID: 8612648094514515512, guid: 8592849bb11137d47b6c86da895e295c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.6
+      value: 6.467
       objectReference: {fileID: 0}
     - target: {fileID: 8612648094514515512, guid: 8592849bb11137d47b6c86da895e295c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.33
+      value: -1.4
       objectReference: {fileID: 0}
     - target: {fileID: 8612648094514515512, guid: 8592849bb11137d47b6c86da895e295c,
         type: 3}
@@ -17200,6 +17208,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 400214409374761989, guid: 966bd137c518d6e4999d9bbdbad184d9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400214409374778418, guid: 966bd137c518d6e4999d9bbdbad184d9,
         type: 3}
       propertyPath: audioSource
@@ -17209,6 +17222,11 @@ PrefabInstance:
         type: 3}
       propertyPath: EffectSound
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 400214409374778419, guid: 966bd137c518d6e4999d9bbdbad184d9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3832438242758825895, guid: 966bd137c518d6e4999d9bbdbad184d9,
         type: 3}

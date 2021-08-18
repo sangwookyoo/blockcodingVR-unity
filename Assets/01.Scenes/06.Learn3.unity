@@ -4692,17 +4692,17 @@ PrefabInstance:
     - target: {fileID: 8612648094514515512, guid: 8592849bb11137d47b6c86da895e295c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.5
+      value: -15.596
       objectReference: {fileID: 0}
     - target: {fileID: 8612648094514515512, guid: 8592849bb11137d47b6c86da895e295c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.6
+      value: 6.141
       objectReference: {fileID: 0}
     - target: {fileID: 8612648094514515512, guid: 8592849bb11137d47b6c86da895e295c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.33
+      value: -1.028
       objectReference: {fileID: 0}
     - target: {fileID: 8612648094514515512, guid: 8592849bb11137d47b6c86da895e295c,
         type: 3}
@@ -8442,6 +8442,8 @@ MonoBehaviour:
   SteamVRPlayer: {fileID: 2099930705}
   Bow: {fileID: 511046010}
   Monster: {fileID: 607701573}
+  Camera_1: {fileID: 1186516408}
+  Camera_3: {fileID: 1887719623}
 --- !u!65 &885115125
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17740,6 +17742,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 400214409374761989, guid: 966bd137c518d6e4999d9bbdbad184d9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400214409374778418, guid: 966bd137c518d6e4999d9bbdbad184d9,
         type: 3}
       propertyPath: audioSource
@@ -17749,6 +17756,11 @@ PrefabInstance:
         type: 3}
       propertyPath: EffectSound
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 400214409374778419, guid: 966bd137c518d6e4999d9bbdbad184d9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3832438242758825895, guid: 966bd137c518d6e4999d9bbdbad184d9,
         type: 3}
@@ -17776,6 +17788,12 @@ PrefabInstance:
 --- !u!4 &1887719622 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400214409374491319, guid: 966bd137c518d6e4999d9bbdbad184d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1887719621}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1887719623 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 400214409374686057, guid: 966bd137c518d6e4999d9bbdbad184d9,
     type: 3}
   m_PrefabInstance: {fileID: 1887719621}
   m_PrefabAsset: {fileID: 0}

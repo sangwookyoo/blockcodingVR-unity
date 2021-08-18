@@ -677,7 +677,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 44631681}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 4.31, y: -1.149, z: 69.69}
+  m_LocalPosition: {x: 4.31, y: -0.21, z: 69.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 218399913}
@@ -2327,6 +2327,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 400214409374761989, guid: 966bd137c518d6e4999d9bbdbad184d9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400214409374778418, guid: 966bd137c518d6e4999d9bbdbad184d9,
         type: 3}
       propertyPath: audioSource
@@ -2336,6 +2341,11 @@ PrefabInstance:
         type: 3}
       propertyPath: EffectSound
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 400214409374778419, guid: 966bd137c518d6e4999d9bbdbad184d9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3832438242758825895, guid: 966bd137c518d6e4999d9bbdbad184d9,
         type: 3}
@@ -3946,7 +3956,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: a8e2abe10d5fb984a8237fbfbcef369f,
         type: 3}
       propertyPath: m_Name
-      value: Player (1)
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: a8e2abe10d5fb984a8237fbfbcef369f,
         type: 3}
@@ -9278,6 +9288,8 @@ MonoBehaviour:
   SteamVRPlayer: {fileID: 44631681}
   Bow: {fileID: 1387200371}
   Monster: {fileID: 1000833436}
+  Camera_1: {fileID: 1366146310}
+  Camera_3: {fileID: 2133456425}
 --- !u!65 &987030826
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13011,17 +13023,17 @@ PrefabInstance:
     - target: {fileID: 8612648094514515512, guid: 8592849bb11137d47b6c86da895e295c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.5
+      value: -14.77
       objectReference: {fileID: 0}
     - target: {fileID: 8612648094514515512, guid: 8592849bb11137d47b6c86da895e295c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.6
+      value: 5.83
       objectReference: {fileID: 0}
     - target: {fileID: 8612648094514515512, guid: 8592849bb11137d47b6c86da895e295c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.33
+      value: -0.75
       objectReference: {fileID: 0}
     - target: {fileID: 8612648094514515512, guid: 8592849bb11137d47b6c86da895e295c,
         type: 3}
@@ -17184,7 +17196,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1816534120
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21225,6 +21237,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 453026, guid: c80ab253d42255449b8f74476ab995ae,
     type: 3}
   m_PrefabInstance: {fileID: 1317515592}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2133456425 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 400214409374686057, guid: 966bd137c518d6e4999d9bbdbad184d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 218399912}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2133842214
 PrefabInstance:

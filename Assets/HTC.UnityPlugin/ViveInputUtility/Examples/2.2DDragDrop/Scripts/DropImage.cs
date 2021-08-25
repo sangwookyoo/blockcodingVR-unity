@@ -57,6 +57,7 @@ public class DropImage : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
                 gameObject.AddComponent<FunctionRotate>().RightRotate();
                 gameObject.GetComponent<DropImage>().enabled = false;
                 gameObject.GetComponent<Image>().color = new Color(255, 255, 255, 1);
+                gameObject.AddComponent<DragImage>();
                 CreateDrops();
             }
             if (data.pointerDrag.CompareTag("Rotate_L"))
@@ -65,6 +66,7 @@ public class DropImage : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
                 gameObject.AddComponent<FunctionRotate>().LeftRotate();
                 gameObject.GetComponent<DropImage>().enabled = false;
                 gameObject.GetComponent<Image>().color = new Color(255, 255, 255, 1);
+                gameObject.AddComponent<DragImage>();
                 CreateDrops();
             }
             if (data.pointerDrag.CompareTag("Rotate_B"))
@@ -73,6 +75,7 @@ public class DropImage : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
                 gameObject.AddComponent<FunctionRotate>().BackRotate();
                 gameObject.GetComponent<DropImage>().enabled = false;
                 gameObject.GetComponent<Image>().color = new Color(255, 255, 255, 1);
+                gameObject.AddComponent<DragImage>();
                 CreateDrops();
             }
             if (data.pointerDrag.CompareTag("Jump"))
@@ -81,6 +84,7 @@ public class DropImage : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
                 gameObject.AddComponent<FunctionJump>().Jump();
                 gameObject.GetComponent<DropImage>().enabled = false;
                 gameObject.GetComponent<Image>().color = new Color(255, 255, 255, 1);
+                gameObject.AddComponent<DragImage>();
                 CreateDrops();
             }
             if (data.pointerDrag.CompareTag("For"))
@@ -88,6 +92,7 @@ public class DropImage : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
                 gameObject.tag = "For";
                 gameObject.GetComponent<DropImage>().enabled = false;
                 gameObject.GetComponent<Image>().color = new Color(255, 255, 255, 1);
+                gameObject.AddComponent<DragImage>();
                 CreateDropsFor();
             }
         }
@@ -104,6 +109,7 @@ public class DropImage : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
                 gameObject.AddComponent<FunctionMove>();
                 gameObject.tag = "MoveZ";
                 gameObject.GetComponent<Image>().color = new Color(255, 255, 255, 1);
+                gameObject.AddComponent<DragImage>();
                 CreateDrops();
 
             }
@@ -112,6 +118,7 @@ public class DropImage : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
                 gameObject.AddComponent<FunctionRotate>().RightRotate();
                 gameObject.tag = "Rotate_R";
                 gameObject.GetComponent<Image>().color = new Color(255, 255, 255, 1);
+                gameObject.AddComponent<DragImage>();
                 CreateDrops();
             }
             if (data.pointerDrag.CompareTag("Rotate_L"))
@@ -119,6 +126,7 @@ public class DropImage : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
                 gameObject.AddComponent<FunctionRotate>().LeftRotate();
                 gameObject.tag = "Rotate_L";
                 gameObject.GetComponent<Image>().color = new Color(255, 255, 255, 1);
+                gameObject.AddComponent<DragImage>();
                 CreateDrops();
             }
             if (data.pointerDrag.CompareTag("Rotate_B"))
@@ -126,6 +134,7 @@ public class DropImage : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
                 gameObject.AddComponent<FunctionRotate>().BackRotate();
                 gameObject.tag = "Rotate_B";
                 gameObject.GetComponent<Image>().color = new Color(255, 255, 255, 1);
+                gameObject.AddComponent<DragImage>();
                 CreateDrops();
             }
             if (data.pointerDrag.CompareTag("Jump"))
@@ -133,6 +142,7 @@ public class DropImage : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
                 gameObject.AddComponent<FunctionJump>().Jump();
                 gameObject.tag = "Jump";
                 gameObject.GetComponent<Image>().color = new Color(255, 255, 255, 1);
+                gameObject.AddComponent<DragImage>();
                 CreateDrops();
             }
             if (data.pointerDrag.CompareTag("For"))
@@ -140,6 +150,7 @@ public class DropImage : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
                 gameObject.tag = "For";
                 gameObject.GetComponent<DropImage>().enabled = false;
                 gameObject.GetComponent<Image>().color = new Color(255, 255, 255, 1);
+                gameObject.AddComponent<DragImage>();
                 CreateDropsFor();
             }
         }
@@ -187,7 +198,7 @@ public class DropImage : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
         CreateDrop = (Instantiate(Drop, DropBox.transform.position, DropBox.transform.rotation));
         CreateDrop.transform.SetParent(DropBox.transform);
         CreateDrop.transform.localScale = new Vector3(1, 1, 1);
-        CreateDrop.GetComponent<Image>().color = new Color(255, 255, 255, 0);        /////////////////////노란 박스 보고싶으면 255,255,255,1
+        CreateDrop.GetComponent<Image>().color = new Color(255, 255, 255, 1);        /////////////////////노란 박스 보고싶으면 255,255,255,1
         CreateDrop.GetComponent<RectTransform>().sizeDelta = new Vector2(300, 100);
         CreateDrop.GetComponent<DropImage>().containerImage = containerImage;
         CreateDrop.GetComponent<DropImage>().receivingImage = CreateDrop.GetComponent<Image>();
@@ -197,9 +208,10 @@ public class DropImage : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoi
     void CreateDropsFor()
     {
         CreateDrop = (Instantiate(Drop, gameObject.transform.position, gameObject.transform.rotation));
+        Debug.Log(CreateDrop.name);
         CreateDrop.transform.SetParent(gameObject.transform);
         CreateDrop.transform.localScale = new Vector3(1, 1, 1);
-        CreateDrop.GetComponent<Image>().color = new Color(255, 255, 255, 0);       /////////////////////노란 박스 보고싶으면 255,255,255,1
+        CreateDrop.GetComponent<Image>().color = new Color(255, 255, 255, 1);       /////////////////////노란 박스 보고싶으면 255,255,255,1
         CreateDrop.GetComponent<RectTransform>().sizeDelta = new Vector2(300, 100);
         CreateDrop.name = "ForDrop";
         CreateDrop.GetComponent<DropImage>().containerImage = containerImage;

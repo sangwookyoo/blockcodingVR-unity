@@ -928,6 +928,9 @@ MonoBehaviour:
   sunrise: {fileID: 0}
   sunset: {fileID: 0}
   journeyTime: 1
+  moveCheck: 0
+  StartPos: {x: 0, y: 0, z: 0}
+  Move: {fileID: 0}
 --- !u!114 &99782790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2979,6 +2982,9 @@ MonoBehaviour:
   sunrise: {fileID: 0}
   sunset: {fileID: 0}
   journeyTime: 1
+  moveCheck: 0
+  StartPos: {x: 0, y: 0, z: 0}
+  Move: {fileID: 0}
 --- !u!114 &272096154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5605,6 +5611,9 @@ MonoBehaviour:
   sunrise: {fileID: 0}
   sunset: {fileID: 0}
   journeyTime: 1
+  moveCheck: 0
+  StartPos: {x: 0, y: 0, z: 0}
+  Move: {fileID: 0}
 --- !u!114 &534793631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6193,6 +6202,26 @@ PrefabInstance:
       propertyPath: EffectSound
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3832438242758825895, guid: 966bd137c518d6e4999d9bbdbad184d9,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4219990940501072883, guid: 966bd137c518d6e4999d9bbdbad184d9,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796150827706349664, guid: 966bd137c518d6e4999d9bbdbad184d9,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8832394335743471130, guid: 966bd137c518d6e4999d9bbdbad184d9,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 400214409371663083, guid: 966bd137c518d6e4999d9bbdbad184d9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 966bd137c518d6e4999d9bbdbad184d9, type: 3}
@@ -6518,6 +6547,8 @@ MonoBehaviour:
   SteamVRPlayer: {fileID: 0}
   Bow: {fileID: 5267733018480315290}
   Monster: {fileID: 1312797227}
+  Camera_1: {fileID: 0}
+  Camera_3: {fileID: 0}
 --- !u!1 &645596370
 GameObject:
   m_ObjectHideFlags: 0
@@ -7320,6 +7351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragOnSurfaces: 1
+  isDropBox: 0
 --- !u!114 &682215031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9872,6 +9904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragOnSurfaces: 1
+  isDropBox: 0
 --- !u!114 &871930171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16895,6 +16928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragOnSurfaces: 1
+  isDropBox: 0
 --- !u!114 &1417356022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18480,6 +18514,9 @@ MonoBehaviour:
   sunrise: {fileID: 0}
   sunset: {fileID: 0}
   journeyTime: 1
+  moveCheck: 0
+  StartPos: {x: 0, y: 0, z: 0}
+  Move: {fileID: 0}
 --- !u!114 &1580637230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18799,6 +18836,9 @@ MonoBehaviour:
   sunrise: {fileID: 0}
   sunset: {fileID: 0}
   journeyTime: 1
+  moveCheck: 0
+  StartPos: {x: 0, y: 0, z: 0}
+  Move: {fileID: 0}
 --- !u!114 &1587352564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19811,6 +19851,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragOnSurfaces: 1
+  isDropBox: 0
 --- !u!114 &1682849179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21167,6 +21208,9 @@ MonoBehaviour:
   sunrise: {fileID: 0}
   sunset: {fileID: 0}
   journeyTime: 1
+  moveCheck: 0
+  StartPos: {x: 0, y: 0, z: 0}
+  Move: {fileID: 0}
 --- !u!114 &1791547631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21622,6 +21666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragOnSurfaces: 1
+  isDropBox: 0
 --- !u!114 &1843052286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23203,6 +23248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragOnSurfaces: 1
+  isDropBox: 0
 --- !u!114 &1990329524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23764,6 +23810,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragOnSurfaces: 1
+  isDropBox: 0
 --- !u!114 &2030421940
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -14,6 +14,7 @@ public class FunctionClass : MonoBehaviour
     public GameObject SaveFx; //SaveFx
     public GameObject MakeFx; //MakeFx
     public GameObject Block; //Block
+    public GameObject PanelDrag;
     GameObject Child;
 
     IEnumerator FxBox() // 함수에 들어가는 블록들을 저장해두는 곳
@@ -75,8 +76,10 @@ public class FunctionClass : MonoBehaviour
         Block4.SetActive(true);
         PML.SetActive(true);
         GameObject CloneBlock = Instantiate(Fx, Block4.transform.position, transform.rotation) as GameObject; //Fx를 클론생성
-        GameObject CloneBlock2 = Instantiate(ClassBlock, Block4.transform.position, transform.rotation) as GameObject; //ClassBlock를 블록생성
+        GameObject CloneBlock2 = Instantiate(ClassBlock, Block4.transform.position, PanelDrag.transform.rotation) as GameObject; //ClassBlock를 블록생성
         //Fx.SetActive(false);
+        Debug.Log("CloneBlock : " + CloneBlock.name);
+        Debug.Log("CloneBlock2 : " + CloneBlock2.name);
         canvasGroup.alpha = 0;
         canvasGroup.blocksRaycasts = false;
         CloneBlock2.transform.SetParent(Block4.transform);
@@ -85,7 +88,7 @@ public class FunctionClass : MonoBehaviour
         canvasGroup2.alpha = 0; //CloneBlock.SetActive(false); 을 대신함
         canvasGroup2.blocksRaycasts = false; // 혹시 터치못하게끔 하기 위해
         //CloneBlock.SetActive(false); //Panel 상에서 보이지 않게끔 비활성화 시킴 > ClassBlock만 보여줌
-        CloneBlock2.transform.localScale = new Vector3(1, 1, 1);
+        CloneBlock2.transform.localScale = new Vector3(0.85f, 0.85f, 1);
         Block3.SetActive(false);
         Block.SetActive(false);
     }

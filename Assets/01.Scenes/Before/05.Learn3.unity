@@ -1033,6 +1033,26 @@ PrefabInstance:
       propertyPath: EffectSound
       value: 
       objectReference: {fileID: 8300000, guid: 92a72a8e238077443b81306bfdb7d3b7, type: 3}
+    - target: {fileID: 3832438242758825895, guid: 966bd137c518d6e4999d9bbdbad184d9,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4219990940501072883, guid: 966bd137c518d6e4999d9bbdbad184d9,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796150827706349664, guid: 966bd137c518d6e4999d9bbdbad184d9,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8832394335743471130, guid: 966bd137c518d6e4999d9bbdbad184d9,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 966bd137c518d6e4999d9bbdbad184d9, type: 3}
 --- !u!4 &117918222 stripped

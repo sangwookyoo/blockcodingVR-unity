@@ -32,8 +32,8 @@ https://youtu.be/6xgYBKthA08
  * Gamification
  * Asynchronous Load
  * Contents maps (ㄱ, ㄷ, ㄹ, T, P)
- * Multiplayer (with Voice Chat)
- * Non-face-to-face Untact Classroom
+ * Multiplayer (Cloud, Voice)
+ * Non-contact Classroom
  * Sandbox Interaction
 
 ## ✔ Acknowledgments

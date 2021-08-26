@@ -2,30 +2,104 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using System;
 public class FunctionFor : MonoBehaviour
 {
     public int count;
-    
+    int nSize;
     int Size = 0;
+    int forcount = 0;
+    int notForCount = 0;
     VerticalLayoutGroup verticalLayoutGroup;
+    Vector2 abcde;
+    List<GameObject> ChildTag = new List<GameObject>();
      void Awake()
     {
         verticalLayoutGroup = GetComponent<VerticalLayoutGroup>();
+        abcde = gameObject.GetComponent<RectTransform>().sizeDelta;
+        Size = transform.childCount;
     }
      void Update()
     {
-        int nSize = transform.childCount;
-        int dSize = nSize - Size;
-        if (dSize >= 2)
+
+        int cSize = transform.childCount;
+        if (Size != cSize)
         {
-            dSize = dSize - 1;
+            Scale();
+            Size = cSize;
         }
-        dSize = dSize - 1;
+
+        //nSize = transform.childCount;
+        //for (int i = 0; i < nSize; i++)
+        //{
+        //    ChildTag = transform.GetChild(i).gameObject;
+
+        //    if (ChildTag.CompareTag("For"))
+        //    {
+        //        gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(abcde.x, abcde.y + 130 * (nSize - 1));
+        //        Debug.Log("1");
+        //    }
+        //    else
+        //    {
+        //        gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(abcde.x, abcde.y + 45 * (nSize - 1));
+        //        Debug.Log("2");
+        //    }
+
+        //}
+        //if (nSize > 1)
+        //{
+        //        if (ChildTag.CompareTag("For"))
+        //    {
+        //        gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(abcde.x, abcde.y + 130 * (nSize - 1));
+        //        Debug.Log("1");
+        //    }
+        //    gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(abcde.x, abcde.y + 70 * (nSize - 1));
+        //}
+
     }
-    
 
-
+    void Scale()
+    {
+        nSize = transform.childCount;
+        ChildTag.Clear();
+        for (int i = 0; i < nSize; i++)
+        {
+            ChildTag.Add(transform.GetChild(i).gameObject);
+            Debug.Log("1 : " + i + " + " + ChildTag[i].name);
+            Debug.Log("1 : " + i + " + " + ChildTag[i].transform.parent);
+        }
+        Debug.Log("nSize : " + nSize);
+        forcount = 0;
+        notForCount = 0;
+        for (int i = 0; i < ChildTag.Count; i++)
+        {
+            Debug.Log("ChildTag.Count : " + ChildTag.Count);
+            Debug.Log("2 : " + i + " + " + ChildTag[i].name);
+            Debug.Log("2 : " + i + " + " + ChildTag[i].transform.parent);
+            Debug.Log("2 : " + i + " + " + ChildTag[i].tag);
+            if (ChildTag[i].CompareTag("For"))
+                forcount++;
+            else
+                notForCount++;
+        }
+      
+        Debug.Log("forcount : " + forcount);
+        Debug.Log("notForCount : " + notForCount);
+        Debug.Log("forcount + notForCount : " + (forcount + notForCount));
+        if (nSize > 1)
+        {
+            gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(abcde.x, abcde.y + ((150 * (nSize - notForCount)) + 45 * ((nSize - forcount -1))));
+        }
+        Debug.Log("nSize - notForCount : " + (nSize - notForCount));
+        Debug.Log("nSize - forcount : " + (nSize - forcount));
+        Debug.Log("150 * (nSize - notForCount : " + (150 * (nSize - notForCount)));
+        Debug.Log("130 * (nSize - notForCount : " + (130 * (nSize - notForCount)));
+        Debug.Log("45 * nSize - forcount : " + (45 * (nSize - forcount)));
+        Debug.Log("((150 * (nSize - notForCount)) + 45 * ((nSize - forcount))) :" + ((150 * (nSize - notForCount)) + 45 * ((nSize - forcount-1))));
+        Debug.Log("((130 * (nSize - notForCount)) + 45 * ((nSize - forcount))) :" + ((130 * (nSize - notForCount)) + 45 * ((nSize - forcount-1))));
+        Debug.Log("abcde.y + ((150 * (nSize - notForCount)) + 45 * ((nSize - forcount)) : " + (abcde.y + ((150 * (nSize - notForCount)) + 45 * ((nSize - forcount-1)))));
+        Debug.Log("abcde.y + ((130 * (nSize - notForCount)) + 45 * ((nSize - forcount)) : " + (abcde.y + ((130 * (nSize - notForCount)) + 45 * ((nSize - forcount-1)))));
+    }
     IEnumerator ForBox() // For()에서 돌아갈 블록들을 여기에 한번 저장을 한다.
     {
         int nSize = transform.childCount;

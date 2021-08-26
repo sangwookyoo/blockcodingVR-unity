@@ -9,7 +9,7 @@ public class DropImageTrash : MonoBehaviour, IDropHandler //IPointerEnterHandler
 
     public void OnDrop(PointerEventData data)
     {
-        if (gameObject.transform.parent.CompareTag("Trash") && data.pointerDrag.transform.parent.CompareTag("Drop"))
+        if (gameObject.transform.parent.CompareTag("Trash") && data.pointerDrag.transform.parent.CompareTag("MainDrop"))
         {
             Debug.Log("TrashDrop");
             isOnDropTrash = true;
@@ -18,21 +18,21 @@ public class DropImageTrash : MonoBehaviour, IDropHandler //IPointerEnterHandler
         }
     }
 
-    private Sprite GetDropSprite(PointerEventData data)
-    {
-        var originalObj = data.pointerDrag;
-        if (originalObj == null)
-            return null;
+    //private Sprite GetDropSprite(PointerEventData data)
+    //{
+    //    var originalObj = data.pointerDrag;
+    //    if (originalObj == null)
+    //        return null;
 
-        var dragMe = originalObj.GetComponent<DragImage>();
-        if (dragMe == null)
-            return null;
+    //    var dragMe = originalObj.GetComponent<DragImage>();
+    //    if (dragMe == null)
+    //        return null;
 
-        var srcImage = originalObj.GetComponent<Image>();
-        if (srcImage == null)
-            return null;
+    //    var srcImage = originalObj.GetComponent<Image>();
+    //    if (srcImage == null)
+    //        return null;
 
-        return srcImage.sprite;
-    }
+    //    return srcImage.sprite;
+    //}
 
 }

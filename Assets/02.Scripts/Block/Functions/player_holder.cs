@@ -34,10 +34,12 @@ public class player_holder : MonoBehaviour
         yield return new WaitForSeconds(1f); //1초 딜레이
         //Fail fail = FailButton.GetComponent<Fail>();
         //메인패널에 접근
-        Blocks = GameObject.FindGameObjectWithTag("Drop").gameObject;//Panel Main Loop에 접근
+        Blocks = GameObject.FindGameObjectWithTag("MainDrop").gameObject;//Panel Main Loop에 접근
+        Debug.Log(Blocks.name);
         int nSize = Blocks.transform.childCount; //Panel Main Loop의 자식들 갯수
         for (int i = 0; i < nSize; i++)
         {
+
             Debug.Log("i : " + i);
             Debug.Log("nSize :" + nSize);
             GameObject Child = Blocks.transform.GetChild(i).gameObject; // Panel Main Loop의 자식오브젝트 저장

@@ -19,7 +19,9 @@ public class FunctionClass : MonoBehaviour
 
     IEnumerator FxBox() // 함수에 들어가는 블록들을 저장해두는 곳
     {
+        Debug.Log("start");
         int nSize = transform.childCount;
+        Debug.Log(nSize);
         for (int i = 0; i < nSize; i++)
         {
             Child = transform.GetChild(i).gameObject; 
@@ -31,30 +33,42 @@ public class FunctionClass : MonoBehaviour
 
             if (FunctionMove)   //FunctionMove 즉, 이동 블록일때 실행
             {
+                Debug.Log("1");
                 yield return StartCoroutine(FunctionMove.MoveZ()); //z축 1 이동
+                Debug.Log("1");
             }
             else if (!FunctionMove && FunctionJump) // 회전 블록 일때 실행
             {
+                Debug.Log("1");
                 if (Child.tag == "Jump") //점프
                     yield return StartCoroutine(FunctionJump.Jump());
             }
             else if (!FunctionMove && !FunctionJump && FunctionRotate) // 회전 블록 일때 실행
             {
+                Debug.Log("1");
                 if (Child.tag == "Rotate_R") //오른쪽 회전
                     yield return StartCoroutine(FunctionRotate.RightRotate());
                 else if (Child.tag == "Rotate_L") //왼쪽 회전
                     yield return StartCoroutine(FunctionRotate.LeftRotate());
                 else if (Child.tag == "Rotate_B") //오른쪽 회전
                     yield return StartCoroutine(FunctionRotate.BackRotate());
+                
             }
             else if (!FunctionMove && !FunctionJump && !FunctionRotate && FunctionFor)// FOR문
             {
+                Debug.Log("1");
                 yield return StartCoroutine(FunctionFor.For());
             }
             else if (!FunctionMove && !FunctionJump && !FunctionRotate && !FunctionFor && FunctionClass) //함수
             {
+                Debug.Log("1");
                 yield return StartCoroutine(FunctionClass.Function());
             }
+            Debug.Log(FunctionMove);
+            Debug.Log(FunctionJump);
+            Debug.Log(FunctionRotate);
+            Debug.Log(FunctionClass);
+
         }
 
     }

@@ -78,15 +78,15 @@ public class player_holder : MonoBehaviour
                 yield return StartCoroutine(FunctionClass.Function()); 
             }
 
-            if (i == (nSize - 1)) //마지막 블록까지 모두 실행됐을때
-            {
-                if (Mathf.Abs(transform.position.x - Finish.transform.position.x) <= 1F && Mathf.Abs(Player.transform.position.z - Finish.transform.position.z) <= 1F) //도착지점에 도착하면 
-                {
-                    animator.SetTrigger("Jump"); //점프
-                }
-                //else // 도착지점에 도착하지 못하면
-                //fail.FailCheck = true; //실패
-            }
+        //    if (i == (nSize - 1)) //마지막 블록까지 모두 실행됐을때
+        //    {
+        //        if (Mathf.Abs(transform.position.x - Finish.transform.position.x) <= 1F && Mathf.Abs(Player.transform.position.z - Finish.transform.position.z) <= 1F) //도착지점에 도착하면 
+        //        {
+        //            animator.SetTrigger("Jump"); //점프
+        //        }
+        //        else // 도착지점에 도착하지 못하면
+        //            fail.FailCheck = true; //실패
+        //    }
         }
     }
    

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class DefaultRoom
@@ -19,8 +20,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     void Start()
     {
-        PhotonNetwork.GameVersion = "0.1";
-        PhotonNetwork.NickName = "Sungkyul"; // 플레이어 이름
+        PhotonNetwork.GameVersion = "1.0";
         PhotonNetwork.AutomaticallySyncScene = true; // 마스터 클라이언트로 동기화
     }
 
@@ -48,7 +48,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         DefaultRoom roomSettings = defaultRooms[defaultRoomIndex];
 
-        PhotonNetwork.LoadLevel(roomSettings.sceneName);
+        SceneManager.LoadScene(roomSettings.sceneName);
 
         RoomOptions roomOptions = new RoomOptions();
         roomOptions.MaxPlayers = (byte)roomSettings.maxPlayer;

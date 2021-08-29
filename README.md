@@ -32,9 +32,9 @@ https://youtu.be/6xgYBKthA08
  * Gamification
  * Asynchronous Load
  * Contents maps (ㄱ, ㄷ, ㄹ, T, P)
+ * Sandbox Custom map
  * Multiplayer (Cloud, Voice)
  * Non-contact Classroom
- * Sandbox Interaction
 
 ## ✔ Acknowledgments
 The result of ICT mentoring project conducted through the support of the Ministry of Science and ICT's Information and Communication creative talent development project.

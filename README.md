@@ -18,7 +18,7 @@ https://youtu.be/6xgYBKthA08
  * Framework : Steam VR 2.6.0b4, PUN 2.32.0, Photon Voice 2.25.1
  * Device : HTC VIVE Cosmos Elite
 
-## ⚙ Scope of implementation of computing models based on curriculum in Korea
+## ⚙ Computing models based on curriculum in Korea
 | Curriculum | Compute Model |
 | ------ | ------ |
 | I/O | VR Drag & Drop |

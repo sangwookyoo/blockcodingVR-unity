@@ -42,7 +42,7 @@ Copyright © 2021 SangwookYoo. (C-2021-046714, Korea Copyright Commission)<br />
 This project is licensed under the MIT License - See the LICENSE.md file for details
 
 ## ✔ Blog
- <a href="https://github.com/SKU-CompileError/blockcodingVR-unity" target="_blank">My Blog</a>
+ <a href="https://chlee200530.tistory.com/" target="_blank">My Blog</a>
 
 ---
 ![수정됨_image02](https://user-images.githubusercontent.com/61134850/127849036-d4a4e22e-2a8e-49ba-ba38-25d4757dffbf.png)<br />

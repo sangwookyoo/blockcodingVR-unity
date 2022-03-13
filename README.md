@@ -11,9 +11,8 @@ https://youtu.be/uo8j0BWXv8k
 
 ## ⚙ Development Environment
  * OS : Windows 10
- * Tool : Unity 3D 2019.3.5
- * SDK : Steam VR 1.13.10
- * Framework : Steam VR 2.6.0b4, PUN 2.32.0, Photon Voice 2.25.1
+ * Tool : Unity 3D 2019.3.5f1
+ * API : Steam VR 2.6.0b4(sdk Steam VR 1.13.10), PUN 2.32.0, Photon Voice 2.25.1
  * Device : HTC VIVE Cosmos Elite
 
 ## ⚙ Computing models based on curriculum in Korea
